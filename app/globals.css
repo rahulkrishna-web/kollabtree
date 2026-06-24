@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #F6F3F3;
   --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-background: #F6F3F3;
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Proxima Nova', system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
+  
+  --color-brand-primary: #114b43;
+  --color-brand-primary-light: #1c5f56;
+  --color-brand-primary-dark: #0a332d;
+  --color-brand-secondary: #2dd4bf;
+  --color-brand-accent: #14b8a6;
+  --color-brand-bg-light: #f4f8f7;
+  --color-brand-bg-card: #f9fbfb;
+  --color-brand-dark: #0f172a;
+
+  --animate-marquee: marquee 20s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 body {
-  background: var(--background);
+  background: #F6F3F3;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Proxima Nova', system-ui, sans-serif;
+  font-weight: 400;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Background Blobs (bokeh) behind Hero Image */
+:root {
+  --Color-Primary: #265B69;
+  --Color-Secondary: #27A469;
+}
+
+.hero-blob-1, .hero-blob-2 {
+  position: absolute;
+  border-radius: 9999px;
+  opacity: 0.3;
+  filter: blur(99.4px);
+  pointer-events: none;
+}
+
+.hero-blob-1 {
+  background: #265B69;
+  background: var(--Color-Primary, #265B69);
+}
+
+.hero-blob-2 {
+  background: #27A469;
+  background: var(--Color-Secondary, #27A469);
+}
+
+/* Mobile responsive defaults */
+.hero-blob-1 {
+  width: 280px;
+  height: 310px;
+  top: -100px;
+  right: -40px;
+}
+
+.hero-blob-2 {
+  width: 280px;
+  height: 310px;
+  bottom: -100px;
+  left: -40px;
+}
+
+/* Desktop styles matching Figma */
+@media (min-width: 768px) {
+  .hero-blob-1 {
+    width: 708.48px;
+    height: 788.07px;
+    top: -309.28px;
+    left: 586.81px;
+  }
+  .hero-blob-2 {
+    width: 516.34px;
+    height: 507.22px;
+    bottom: -150px;
+    left: -150px;
+  }
+}
+
+@keyframes blob-float {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(151.55deg);
+  }
+  50% {
+    transform: translate(30px, -50px) scale(1.05) rotate(160deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(151.55deg);
+  }
+}
+
+@keyframes blob-float-reverse {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(45deg);
+  }
+  50% {
+    transform: translate(-30px, 40px) scale(0.95) rotate(35deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(45deg);
+  }
+}
+
+.animate-background-blob {
+  animation: blob-float 15s ease-in-out infinite;
+}
+
+.animate-background-blob-reverse {
+  animation: blob-float-reverse 15s ease-in-out infinite;
+}
+
