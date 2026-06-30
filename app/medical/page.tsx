@@ -40,47 +40,41 @@ const GlobeIcon = () => (
   </svg>
 );
 
-export default function AcademicPage() {
+export default function MedicalPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
 
   const testimonials = [
     {
-      name: "Valli Maya",
-      role: "Associate Professor, Scientific Methodologies",
-      quote: "I find Kolabtree to be a great platform for academic freelancers. Kolabtree provides a unique opportunity for freelancers, specifically those in the academic field, to connect with clients who require their expertise and services.",
-      initials: "VM"
+      name: "Carlos Del Rio",
+      role: "Freelance Medical & Scientific Writer",
+      quote: "I have been working as a freelance Medical/Scientific Writer with Kolabtree for almost two years. My experience with the platform has been excellent so far. I have been able to work on a variety of interesting projects with clients all over the world.",
+      initials: "CD"
     },
     {
-      name: "Fasil Merawi",
-      role: "Department Chair, Addis Ababa University",
-      quote: "Kolabtree is an excellent platform to interact with field-specific experts. For every need in research, education and academic functions, there are experts here to help. Moreover, Kolabtree personnel are also very active in fulfilling our needs.",
-      initials: "FM"
+      name: "Daniel Barolet",
+      role: "Client & Research Director",
+      quote: "I want to thank you for a very positive experience with the writer and the Kolabtree team. The entire process was smooth and trouble-free. I have nothing but positive comments about the scientist freelancer who provided the manuscript.",
+      initials: "DB"
     },
     {
-      name: "Dr. Elena Rostova",
-      role: "Senior Researcher, Molecular Biology",
-      quote: "I needed a specialized biostatistician to review our clinical study dataset before submitting to Nature. The statistician we hired via Kolabtree was brilliant, fast, and helped refine our methodology sections perfectly.",
-      initials: "ER"
+      name: "Dr. Sarah Jenkins",
+      role: "Principal Investigator",
+      quote: "We needed a high-quality clinical trial protocol written in a tight deadline. The medical writer we found via Kolabtree was outstanding, extremely professional, and understood the therapeutic area perfectly.",
+      initials: "SJ"
     },
     {
-      name: "Prof. Arthur Pendelton",
-      role: "Director of Research, Environmental Sciences",
-      quote: "Our grant proposal draft was good, but the scientific editing and formatting provided by the Kolabtree expert elevated it to a winning submission. Truly a seamless, secure, and professional collaboration.",
-      initials: "AP"
+      name: "Dr. Marcus Vance",
+      role: "Biotech Founder",
+      quote: "The regulatory documentation support we received was stellar. The consultant helped us prepare our FDA submission documentation, ensuring all compliance and technical standards were fully met.",
+      initials: "MV"
     },
     {
-      name: "Dr. Hiroshi Tanaka",
-      role: "Professor of Chemistry, Kyoto Institute",
-      quote: "Kolabtree allowed us to hire an expert in quantum chemistry simulation on demand. The results were highly accurate and critical for our subsequent journal publication.",
-      initials: "HT"
-    },
-    {
-      name: "Dr. Beatrice Vance",
-      role: "Associate Dean, Social Sciences",
-      quote: "We needed qualitative data analysis for a multi-country survey. The sociologist we found on Kolabtree delivered top-tier thematic coding that exceeded our expectations.",
-      initials: "BV"
+      name: "Prof. Emily Zhang",
+      role: "Academic Physician",
+      quote: "Collaborating with a Kolabtree editor to polish our manuscript draft made all the difference. The language refinement was top-tier, and our paper was accepted into a Q1 medical journal.",
+      initials: "EZ"
     }
   ];
 
@@ -117,35 +111,35 @@ export default function AcademicPage() {
   const faqs = [
     {
       question: "How does the hiring process work?",
-      answer: "Start by submitting your research project details, key objectives, and timeline. Vetted academic experts and researchers will review your requirements and submit custom proposals. You can message and interview candidates directly, choose the best fit, and fund your project securely via Kolabtree's milestone escrow system."
+      answer: "Start by submitting your research project details, key objectives, and timeline. Vetted medical and scientific writers will review your requirements and submit custom proposals. You can message and interview candidates directly, choose the best fit, and fund your project securely via Kolabtree's milestone escrow system."
     },
     {
-      question: "What qualifications do researchers on Kolabtree have?",
-      answer: "Our network consists of PhD-level researchers, peer-reviewed scientists, experienced statisticians, and academic editors. Most hold doctorates or advanced degrees from top global universities and research institutes, with extensive publication histories in leading scientific journals."
+      question: "What qualifications do medical and scientific writers on Kolabtree have?",
+      answer: "Our network consists of PhD-level scientists, medical doctors, experienced medical writers, regulatory specialists, and peer-reviewed researchers. Most hold doctorates or advanced degrees from top global universities and research institutions, with extensive experience in clinical writing, journal submissions, and scientific communication."
     },
     {
       question: "Can experts assist with publication-ready manuscripts?",
-      answer: "Yes, our scientific writers and peer-review editors help refine, structure, and check research papers to ensure they meet the rigorous submission standards of high-impact journals, including formatting, clarity, and language polishing."
+      answer: "Yes, our scientific editors and medical writers help refine, structure, and check research papers to ensure they meet the rigorous submission standards of high-impact journals, including formatting, clarity, language polishing, and reference compliance."
     },
     {
       question: "Can I work with experts under a Non-Disclosure Agreement (NDA)?",
-      answer: "Absolutely. Confidentiality is fundamental to academic research. You can upload your own custom NDA, or request that experts sign a standard confidentiality agreement before sharing any proprietary datasets, hypotheses, or manuscript drafts."
+      answer: "Absolutely. Confidentiality is fundamental to clinical and scientific research. You can upload your own custom NDA, or request that experts sign a standard confidentiality agreement before sharing any proprietary data, notes, or manuscript drafts."
     },
     {
-      question: "How are payments handled?",
-      answer: "Payments are safely held in Kolabtree's secure escrow system. You fund milestones before work begins, and funds are only released to the expert once you review and approve the completed deliverables at each stage."
+      question: "Can experts help prepare manuscripts for peer-reviewed journals?",
+      answer: "Yes, experts can support you through the entire manuscript lifecycle, including drafting the abstract/introduction, structuring methodology, formatting tables and charts, and addressing reviewer comments during the submission phase."
     },
     {
-      question: "Can experts help with statistical analysis and data interpretation?",
-      answer: "Yes. We have certified biostatisticians, data scientists, and statistical modeling experts who can assist with study design, sample size calculations, hypothesis testing, R/SPSS/Python analysis, and data visualization."
+      question: "Can experts assist with literature reviews and evidence summaries?",
+      answer: "Yes. Certified researchers can conduct comprehensive literature searches across databases like PubMed, Embase, and Cochrane, synthesizing the evidence into systematic reviews, meta-analyses, or gap analysis reports."
     },
     {
-      question: "How quickly will I receive proposals?",
-      answer: "Most project postings receive initial proposals from qualified academic freelancers within 24 to 48 hours. You can review their profiles, check past research history, and start communicating immediately."
+      question: "Can experts support regulatory and compliance documentation?",
+      answer: "Absolutely. We have regulatory affairs specialists who can assist with preparation of clinical study reports, investigator brochures, health authority submissions (FDA, EMA), and compliance documents for medical device or drug approval."
     },
     {
-      question: "Can experts support grant applications and funding proposals?",
-      answer: "Yes. Many experts have extensive experience preparing grant applications, research proposals, and funding submissions for organizations like the NIH, NSF, Horizon Europe, and private foundations."
+      question: "Can experts work from existing research data, notes or draft content?",
+      answer: "Yes. Whether you have raw research findings, presentation slides, internal reports or an incomplete draft, experts can help transform existing materials into clear, accurate and publication-ready content."
     }
   ];
 
@@ -185,10 +179,10 @@ export default function AcademicPage() {
             {/* Left Content */}
             <div className="flex flex-col items-start text-left">
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
-                Academic Research &amp; Support Services
+                Medical &amp;<br />Scientific Writing<br />Services
               </h1>
               <p className="text-teal-50 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-                Get expert support at every stage of the research process. From literature reviews and study design to statistical analysis and manuscript preparation, Kolabtree connects you with experienced researchers, scientists and subject matter experts.
+                Work with experienced medical writers, scientific communicators and subject matter experts to create accurate, publication-ready content. From journal manuscripts and white papers to regulatory documents and literature reviews, Kolabtree connects you with specialists across a wide range of scientific disciplines.
               </p>
               
               <a
@@ -210,8 +204,8 @@ export default function AcademicPage() {
             {/* Right Image */}
             <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/academic_hero.png"
-                alt="Academic researchers collaborating"
+                src="/medical_hero.png"
+                alt="Medical professionals reviewing a tablet"
                 fill
                 priority
                 className="object-cover"
@@ -251,7 +245,7 @@ export default function AcademicPage() {
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                     <GlobeIcon />
                   </div>
-                  <span>Global network of specialists</span>
+                  <span>Global network of experts</span>
                 </div>
                 <span className="text-teal-700 text-lg select-none">|</span>
               </div>
@@ -260,17 +254,17 @@ export default function AcademicPage() {
         </div>
       </section>
 
-      {/* 3. Academic Research Support Services Section (Card inside Card) */}
+      {/* 3. Medical & Scientific Writing Services Section (Card inside Card) */}
       <section className="py-[15px] px-[15px] bg-zinc-50/50">
         <div>
           <div className="bg-white rounded-3xl border border-zinc-200/60 p-8 md:p-16 shadow-xl shadow-zinc-200/30">
             
             <div className="text-left max-w-3xl mb-12">
               <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-6">
-                Academic Research Support Services
+                Medical &amp; Scientific Writing Services
               </h2>
               <p className="text-[#18181B] text-base md:text-lg leading-relaxed">
-                Whether you&apos;re conducting academic research, preparing a publication or managing a complex research project, Kolabtree experts can provide specialised support tailored to your objectives.
+                Whether you&apos;re preparing a manuscript, developing scientific content or creating regulatory documentation, Kolabtree experts can provide specialised support tailored to your requirements.
               </p>
             </div>
 
@@ -279,52 +273,52 @@ export default function AcademicPage() {
               {/* Card 1 */}
               <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
                 <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">01</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Literature Reviews</h3>
+                <h3 className="text-lg font-bold text-[#18181B] mb-2">Medical Writing</h3>
                 <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Conduct comprehensive literature reviews to identify existing research, knowledge gaps and emerging trends.
+                  Develop clear, accurate and evidence-based medical content for healthcare, pharmaceutical and life sciences audiences.
                 </p>
               </div>
 
               {/* Card 2 */}
               <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
                 <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">02</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Research Methodology</h3>
+                <h3 className="text-lg font-bold text-[#18181B] mb-2">Scientific Writing</h3>
                 <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Develop robust study designs and research methodologies aligned with your project goals.
+                  Create scientific articles, technical reports, white papers and research summaries with support from experienced writers and subject matter experts.
                 </p>
               </div>
 
               {/* Card 3 */}
               <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
                 <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">03</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Systematic Reviews</h3>
+                <h3 className="text-lg font-bold text-[#18181B] mb-2">Manuscript Preparation</h3>
                 <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Receive support with evidence synthesis, systematic reviews and meta-analysis projects.
+                  Improve the quality, structure and presentation of research papers before journal submission.
                 </p>
               </div>
 
               {/* Card 4 */}
               <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
                 <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">04</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Statistical Analysis</h3>
+                <h3 className="text-lg font-bold text-[#18181B] mb-2">Literature Reviews</h3>
                 <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Work with statisticians and data analysts to interpret research findings with confidence.
+                  Conduct comprehensive reviews of published research to support scientific, medical and regulatory projects.
                 </p>
               </div>
 
               {/* Card 5 */}
               <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
                 <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">05</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Manuscript Preparation</h3>
+                <h3 className="text-lg font-bold text-[#18181B] mb-2">Regulatory Documentation</h3>
                 <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Improve the quality, structure and presentation of research papers before submission.
+                  Receive support with regulatory submissions, technical documentation and compliance-related content.
                 </p>
               </div>
 
               {/* Card 6 */}
               <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
                 <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">06</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Grant Writing Support</h3>
+                <h3 className="text-lg font-bold text-[#18181B] mb-2">Grant Writing &amp; Research Proposals</h3>
                 <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
                   Develop compelling grant applications and funding proposals with expert guidance.
                 </p>
@@ -336,7 +330,7 @@ export default function AcademicPage() {
         </div>
       </section>
 
-      {/* 4. Work with Experienced Research Professionals Section (Dark Teal Gradient Card) */}
+      {/* 4. Work with Experienced Writers & Subject Matter Experts Section (Dark Teal Gradient Card) */}
       <section className="px-[15px] py-[15px]">
         <div 
           className="rounded-3xl text-white relative overflow-hidden py-16 md:py-24 px-8 md:px-12"
@@ -352,10 +346,10 @@ export default function AcademicPage() {
               <div className="lg:col-span-5 flex flex-col justify-center">
                 <div className="lg:mx-auto">
                   <h2 className="text-[32px] md:text-[42px] font-medium tracking-[-1.5px] mb-6 leading-[1.2] max-w-[320px]">
-                    Work with Experienced Research Professionals
+                    Work with Experienced Writers &amp; Subject Matter Experts
                   </h2>
                   <p className="text-teal-50 text-base md:text-lg leading-relaxed max-w-[340px]">
-                    Kolabtree provides access to academic researchers, statisticians, scientists and subject matter experts across a wide range of disciplines.
+                    Kolabtree provides access to medical writers, scientific communicators, researchers and industry specialists across a wide range of disciplines.
                   </p>
                 </div>
               </div>
@@ -365,38 +359,38 @@ export default function AcademicPage() {
                 
                 {/* Card 1 */}
                 <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
-                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Academic Researchers</h3>
-                  <p className="text-[#18181B] text-sm leading-relaxed">Researchers with experience across universities, research institutions and industry.</p>
+                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Medical Writers</h3>
+                  <p className="text-[#18181B] text-sm leading-relaxed">Experts in healthcare, pharmaceutical and life sciences communication.</p>
                 </div>
 
                 {/* Card 2 */}
                 <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
-                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Statisticians</h3>
-                  <p className="text-[#18181B] text-sm leading-relaxed">Experts in data analysis, study design and interpretation of research findings.</p>
+                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Scientific Writers</h3>
+                  <p className="text-[#18181B] text-sm leading-relaxed">Support for manuscripts, journal articles, technical reports and scientific publications.</p>
                 </div>
 
                 {/* Card 3 */}
                 <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
-                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Scientific Writers</h3>
-                  <p className="text-[#18181B] text-sm leading-relaxed">Support for manuscripts, journal articles, white papers and technical reports.</p>
+                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Researchers &amp; PhDs</h3>
+                  <p className="text-[#18181B] text-sm leading-relaxed">Subject matter experts with deep scientific and technical knowledge.</p>
                 </div>
 
                 {/* Card 4 */}
                 <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
-                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Subject Matter Experts</h3>
-                  <p className="text-[#18181B] text-sm leading-relaxed">Specialists across life sciences, healthcare, engineering, social sciences and more.</p>
+                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Regulatory Specialists</h3>
+                  <p className="text-[#18181B] text-sm leading-relaxed">Support for compliance documentation and regulatory submissions.</p>
                 </div>
 
                 {/* Card 5 */}
                 <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
-                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Research Consultants</h3>
-                  <p className="text-[#18181B] text-sm leading-relaxed">Guidance on project planning, methodology and research strategy.</p>
+                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Grant Writing Consultants</h3>
+                  <p className="text-[#18181B] text-sm leading-relaxed">Guidance on funding applications, proposals and supporting documentation.</p>
                 </div>
 
                 {/* Card 6 */}
                 <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
-                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Data Analysts</h3>
-                  <p className="text-[#18181B] text-sm leading-relaxed">Support for data management, statistical modelling and research insights.</p>
+                  <h3 className="font-bold text-lg text-[#18181B] mb-2">Scientific Editors</h3>
+                  <p className="text-[#18181B] text-sm leading-relaxed">Assistance with editing, formatting and publication readiness.</p>
                 </div>
 
               </div>
@@ -417,7 +411,7 @@ export default function AcademicPage() {
                   How Kolabtree Works
                 </h2>
                 <p className="text-[#18181B] text-base md:text-lg leading-relaxed">
-                  Connect with qualified researchers and academic experts in three simple steps.
+                  Connect with qualified writing and scientific experts in three simple steps.
                 </p>
               </div>
 
@@ -436,9 +430,9 @@ export default function AcademicPage() {
                       1
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-brand-primary mb-2">Tell Us About Your Research Project</h3>
+                      <h3 className="text-xl font-bold text-brand-primary mb-2">Tell Us About Your Project</h3>
                       <p className="text-[#18181B] text-base leading-relaxed">
-                        Share your objectives, requirements and timeline.
+                        Share your writing requirements, objectives and timeline.
                       </p>
                     </div>
                   </div>
@@ -451,7 +445,7 @@ export default function AcademicPage() {
                     <div>
                       <h3 className="text-xl font-bold text-brand-primary mb-2">Receive Expert Responses</h3>
                       <p className="text-[#18181B] text-base leading-relaxed">
-                        Review proposals from qualified academic research professionals.
+                        Review proposals from qualified medical and scientific writing professionals.
                       </p>
                     </div>
                   </div>
@@ -464,7 +458,7 @@ export default function AcademicPage() {
                     <div>
                       <h3 className="text-xl font-bold text-brand-primary mb-2">Start Collaborating</h3>
                       <p className="text-[#18181B] text-base leading-relaxed">
-                        Choose the expert that best fits your project and begin working together.
+                        Select the expert who best fits your project and begin working together.
                       </p>
                     </div>
                   </div>
@@ -477,7 +471,7 @@ export default function AcademicPage() {
         </div>
       </section>
 
-      {/* 6. Testimonials Section (PDF matching names & design) */}
+      {/* 6. Testimonials Section */}
       <section className="py-[15px] px-[15px]">
         <div 
           className="text-white rounded-3xl py-12 md:py-16 px-6 md:px-12 text-center relative overflow-hidden shadow-xl shadow-teal-900/10"
@@ -485,7 +479,7 @@ export default function AcademicPage() {
         >
           
           <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-12 max-w-3xl mx-auto">
-            Trusted by Researchers Worldwide
+            Trusted by Researchers &amp; Organizations Worldwide
           </h2>
 
           <div className="relative w-full flex items-center justify-center gap-2 md:gap-4">
@@ -563,7 +557,7 @@ export default function AcademicPage() {
         </div>
       </section>
 
-      {/* 7. Popular Academic Research Projects (Flip Layout & 1-Col list) */}
+      {/* 7. Popular Medical & Scientific Writing Projects */}
       <section className="py-[15px] px-[15px] bg-[#fcfafa]">
         <div>
           <div className="bg-white rounded-3xl border border-zinc-200/60 p-8 md:p-16 shadow-xl relative overflow-hidden">
@@ -573,8 +567,8 @@ export default function AcademicPage() {
                 {/* Image (Mobile: Top, Desktop: Left) */}
                 <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="/academic_collaboration.png"
-                    alt="Researchers at a desk"
+                    src="/medical_collaboration.png"
+                    alt="Researchers in a state of the art laboratory looking at clinical trial data"
                     fill
                     className="object-cover"
                     sizes="(max-w-1024px) 100vw, 600px"
@@ -584,25 +578,25 @@ export default function AcademicPage() {
                 {/* Text & List (Mobile: Bottom, Desktop: Right) */}
                 <div className="order-2 lg:order-2">
                   <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-6">
-                    Popular Academic Research Projects
+                    Popular Medical &amp; Scientific Writing Projects
                   </h2>
                   <p className="text-[#18181B] text-[20px] leading-[28px] font-normal mb-8">
-                    Our experts support a wide range of academic and research initiatives across multiple disciplines.
+                    Our experts support a wide range of medical, scientific and technical communication projects.
                   </p>
 
                   <div className="flex flex-col space-y-3">
                     {[
+                      "Medical Writing",
+                      "Scientific Writing",
+                      "Journal Manuscript Preparation",
                       "Literature Reviews",
                       "Systematic Reviews",
-                      "Meta-Analyses",
-                      "Research Methodology Development",
-                      "Statistical Analysis",
-                      "Survey Design & Analysis",
-                      "Journal Manuscript Preparation",
+                      "White Papers",
+                      "Regulatory Documentation",
+                      "Clinical Study Reports",
+                      "Research Summaries",
+                      "Technical Reports",
                       "Grant Writing",
-                      "Research Proposal Development",
-                      "Data Interpretation",
-                      "Scientific Reporting",
                       "Publication Support"
                     ].map((bullet, idx) => (
                       <div key={idx} className="flex items-center gap-3">
@@ -677,10 +671,10 @@ export default function AcademicPage() {
         <div className="w-full bg-gradient-to-br from-[#285B69] to-[#0b4027] text-white rounded-3xl p-10 md:p-16 text-center shadow-2xl relative overflow-hidden">
           
           <h2 className="text-4xl md:text-[72px] font-bold leading-[1.05] tracking-[-1.8px] max-w-4xl mx-auto mb-6">
-            Need Support with Your Research Project?
+            Need Support with a Medical or Scientific Writing Project?
           </h2>
           <p className="text-teal-50 text-base md:text-lg mb-10 leading-relaxed">
-            Connect with experienced researchers, statisticians and subject matter experts for support across every stage of the research process.
+            Connect with experienced medical writers, scientific communicators and subject matter experts for support across every stage of the writing and publication process.
           </p>
           
           <button

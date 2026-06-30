@@ -17,6 +17,7 @@ export default function RootLayout({
       className="h-full antialiased"
     >
       <head>
+        <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/proxima-nova-2" />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>

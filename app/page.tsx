@@ -186,11 +186,15 @@ export default function Home() {
       {/* 1. Header/Navbar */}
       <header className="w-full border-b border-zinc-100/80 bg-[#F6F3F3]/75 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
         <div className="w-full px-8 md:px-12 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3 group cursor-pointer">
-            <TreesLogoIcon />
-            <span className="text-xl font-bold tracking-tight text-brand-primary group-hover:text-brand-primary-light transition-colors">
-              Kolabtree
-            </span>
+          <div className="cursor-pointer">
+            <Image
+              src="/Kolabtree_logo.svg"
+              alt="Kolabtree Logo"
+              width={159}
+              height={36}
+              priority
+              className="h-9 w-auto"
+            />
           </div>
           
           <a
@@ -800,9 +804,14 @@ export default function Home() {
             
             {/* Column 1: Logo */}
             <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
-              <div className="flex items-center gap-3 mb-4">
-                <TreesLogoIcon />
-                <span className="text-lg font-bold text-brand-primary tracking-tight">Kolabtree</span>
+              <div className="mb-4">
+                <Image
+                  src="/Kolabtree_logo.svg"
+                  alt="Kolabtree Logo"
+                  width={159}
+                  height={36}
+                  className="h-9 w-auto"
+                />
               </div>
               <p className="text-zinc-600 text-sm leading-relaxed max-w-xs">
                 The global freelance marketplace connecting companies with specialized scientists and academic experts.

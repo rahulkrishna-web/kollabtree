@@ -139,11 +139,15 @@ export default function FnbPage() {
       {/* 1. Header/Navbar */}
       <header className="w-full bg-white border-b border-zinc-100">
         <div className="w-full px-8 md:px-12 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3 cursor-pointer">
-            <TreesLogoIcon />
-            <span className="text-2xl font-normal text-[#285B69]">
-              Kolabtree
-            </span>
+          <div className="cursor-pointer">
+            <Image
+              src="/Kolabtree_logo.svg"
+              alt="Kolabtree Logo"
+              width={159}
+              height={36}
+              priority
+              className="h-9 w-auto"
+            />
           </div>
           
           <a
@@ -693,9 +697,14 @@ export default function FnbPage() {
             
             {/* Column 1: Logo */}
             <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
-              <div className="flex items-center gap-3 mb-4">
-                <TreesLogoIcon />
-                <span className="text-lg font-bold text-[#285B69] tracking-tight">Kolabtree</span>
+              <div className="mb-4">
+                <Image
+                  src="/Kolabtree_logo.svg"
+                  alt="Kolabtree Logo"
+                  width={159}
+                  height={36}
+                  className="h-9 w-auto"
+                />
               </div>
               <p className="text-zinc-600 text-sm leading-relaxed max-w-xs font-normal">
                 The global freelance marketplace connecting companies with specialized scientists and academic experts.
