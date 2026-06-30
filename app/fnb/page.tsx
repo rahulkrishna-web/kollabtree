@@ -264,70 +264,70 @@ export default function FnbPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             
             {/* Card 1 */}
-            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
-              <div className="w-12 h-12 mb-6">
+            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
                 <Image src="/fnb_icons/food_product_development.png" alt="Food Product Development" width={48} height={48} className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-lg font-bold text-[#18181B] mb-2">Food Product Development</h3>
-              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Food Product Development</h3>
+              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
                 Develop new food products with support from experienced food scientists and formulation specialists.
               </p>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
-              <div className="w-12 h-12 mb-6">
+            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
                 <Image src="/fnb_icons/product_reformulation.png" alt="Product Reformulation" width={48} height={48} className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-lg font-bold text-[#18181B] mb-2">Product Reformulation</h3>
-              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Product Reformulation</h3>
+              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
                 Improve taste, texture, nutritional value, shelf life or manufacturing efficiency for existing products.
               </p>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
-              <div className="w-12 h-12 mb-6">
+            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
                 <Image src="/fnb_icons/beverage_formulation.png" alt="Beverage Formulation" width={48} height={48} className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-lg font-bold text-[#18181B] mb-2">Beverage Formulation</h3>
-              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Beverage Formulation</h3>
+              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
                 Create functional beverages and innovative beverage products tailored to your target market.
               </p>
             </div>
 
             {/* Card 4 */}
-            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
-              <div className="w-12 h-12 mb-6">
+            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
                 <Image src="/fnb_icons/shelf_life.png" alt="Shelf-Life & Stability Studies" width={48} height={48} className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-lg font-bold text-[#18181B] mb-2">Shelf-Life &amp; Stability Studies</h3>
-              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Shelf-Life &amp; Stability Studies</h3>
+              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
                 Assess product stability, quality and shelf life under different storage and environmental conditions.
               </p>
             </div>
 
             {/* Card 5 */}
-            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
-              <div className="w-12 h-12 mb-6">
+            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
                 <Image src="/fnb_icons/nutrition_consulting.png" alt="Nutrition Consulting" width={48} height={48} className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-lg font-bold text-[#18181B] mb-2">Nutrition Consulting</h3>
-              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Nutrition Consulting</h3>
+              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
                 Work with qualified nutrition experts to evaluate ingredients, nutritional profiles and health claims.
               </p>
             </div>
 
             {/* Card 6 */}
-            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
-              <div className="w-12 h-12 mb-6">
+            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
                 <Image src="/fnb_icons/regulatory_support.png" alt="Regulatory Support" width={48} height={48} className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-lg font-bold text-[#18181B] mb-2">Regulatory Support</h3>
-              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Regulatory Support</h3>
+              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
                 Receive guidance on food labelling, ingredient compliance, nutritional claims and market-specific regulations.
               </p>
             </div>
@@ -359,41 +359,41 @@ export default function FnbPage() {
                 </div>
               </div>
 
-              {/* Right Column Grid */}
-              <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {/* Right Column Grid / Carousel on Mobile */}
+              <div className="lg:col-span-7 flex md:grid md:grid-cols-2 gap-4 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 no-scrollbar w-[calc(100%+4rem)] -mx-8 px-8 scroll-pl-8 md:w-full md:mx-0 md:px-0 md:scroll-pl-0">
                 
                 {/* Card 1 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Food Scientists</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Experts in food formulation, ingredient selection and product development.</p>
                 </div>
 
                 {/* Card 2 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Food Technologists</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Guidance on product optimisation, manufacturing processes and quality control.</p>
                 </div>
 
                 {/* Card 3 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Product Development Consultants</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Strategic support for bringing new food and beverage products to market.</p>
                 </div>
 
                 {/* Card 4 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Nutritionists</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Support for nutritional analysis, dietary considerations and health-focused products.</p>
                 </div>
 
                 {/* Card 5 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Regulatory Affairs Specialists</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Support for food labelling, compliance requirements and regulatory documentation.</p>
                 </div>
 
                 {/* Card 6 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Quality &amp; Safety Specialists</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Experts in food safety, shelf-life testing and quality assurance.</p>
                 </div>

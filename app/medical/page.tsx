@@ -268,58 +268,76 @@ export default function MedicalPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
               
               {/* Card 1 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">01</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Medical Writing</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">01</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Medical Writing</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Develop clear, accurate and evidence-based medical content for healthcare, pharmaceutical and life sciences audiences.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Develop clear, accurate and evidence-based medical content for healthcare, pharmaceutical and life sciences audiences.
                 </p>
               </div>
 
               {/* Card 2 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">02</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Scientific Writing</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">02</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Scientific Writing</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Create scientific articles, technical reports, white papers and research summaries with support from experienced writers and subject matter experts.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Create scientific articles, technical reports, white papers and research summaries with support from experienced writers and subject matter experts.
                 </p>
               </div>
 
               {/* Card 3 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">03</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Manuscript Preparation</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">03</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Manuscript Preparation</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Improve the quality, structure and presentation of research papers before journal submission.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Improve the quality, structure and presentation of research papers before journal submission.
                 </p>
               </div>
 
               {/* Card 4 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">04</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Literature Reviews</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">04</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Literature Reviews</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Conduct comprehensive reviews of published research to support scientific, medical and regulatory projects.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Conduct comprehensive reviews of published research to support scientific, medical and regulatory projects.
                 </p>
               </div>
 
               {/* Card 5 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">05</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Regulatory Documentation</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">05</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Regulatory Documentation</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Receive support with regulatory submissions, technical documentation and compliance-related content.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Receive support with regulatory submissions, technical documentation and compliance-related content.
                 </p>
               </div>
 
               {/* Card 6 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">06</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Grant Writing &amp; Research Proposals</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">06</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Grant Writing &amp; Research Proposals</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Develop compelling grant applications and funding proposals with expert guidance.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Develop compelling grant applications and funding proposals with expert guidance.
                 </p>
               </div>
@@ -354,41 +372,41 @@ export default function MedicalPage() {
                 </div>
               </div>
 
-              {/* Right Column Grid */}
-              <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {/* Right Column Grid / Carousel on Mobile */}
+              <div className="lg:col-span-7 flex md:grid md:grid-cols-2 gap-4 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 no-scrollbar w-[calc(100%+4rem)] -mx-8 px-8 scroll-pl-8 md:w-full md:mx-0 md:px-0 md:scroll-pl-0">
                 
                 {/* Card 1 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Medical Writers</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Experts in healthcare, pharmaceutical and life sciences communication.</p>
                 </div>
 
                 {/* Card 2 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Scientific Writers</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Support for manuscripts, journal articles, technical reports and scientific publications.</p>
                 </div>
 
                 {/* Card 3 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Researchers &amp; PhDs</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Subject matter experts with deep scientific and technical knowledge.</p>
                 </div>
 
                 {/* Card 4 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Regulatory Specialists</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Support for compliance documentation and regulatory submissions.</p>
                 </div>
 
                 {/* Card 5 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Grant Writing Consultants</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Guidance on funding applications, proposals and supporting documentation.</p>
                 </div>
 
                 {/* Card 6 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Scientific Editors</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Assistance with editing, formatting and publication readiness.</p>
                 </div>

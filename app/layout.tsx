@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kolabtree — Hire Freelance Cosmetic Formulation Experts",
+  title: "Kolabtree - Hire Freelance Cosmetic Formulation Experts",
   description: "Connect with experienced cosmetic chemists, formulation scientists, and regulatory consultants. Develop skincare, haircare, and personal care products on Kolabtree's vetted scientific marketplace.",
 };
 

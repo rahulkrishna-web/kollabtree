@@ -275,58 +275,76 @@ export default function AcademicPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
               
               {/* Card 1 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">01</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Literature Reviews</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">01</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Literature Reviews</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
                   Conduct comprehensive literature reviews to identify existing research, knowledge gaps and emerging trends.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
+                  Conduct comprehensive literature reviews to identify existing research, knowledge gaps and emerging trends
                 </p>
               </div>
 
               {/* Card 2 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">02</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Research Methodology</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">02</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Research Methodology</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Develop robust study designs and research methodologies aligned with your project goals.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Develop robust study designs and research methodologies aligned with your project goals.
                 </p>
               </div>
 
               {/* Card 3 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">03</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Systematic Reviews</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">03</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Systematic Reviews</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Receive support with evidence synthesis, systematic reviews and meta-analysis projects.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Receive support with evidence synthesis, systematic reviews and meta-analysis projects.
                 </p>
               </div>
 
               {/* Card 4 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">04</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Statistical Analysis</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">04</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Statistical Analysis</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Work with statisticians and data analysts to interpret research findings with confidence.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Work with statisticians and data analysts to interpret research findings with confidence.
                 </p>
               </div>
 
               {/* Card 5 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">05</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Manuscript Preparation</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">05</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Manuscript Preparation</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Improve the quality, structure and presentation of research papers before submission.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Improve the quality, structure and presentation of research papers before submission.
                 </p>
               </div>
 
               {/* Card 6 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-brand-primary text-xl md:text-2xl font-bold mb-3">06</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Grant Writing Support</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+              <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
+                <span className="text-brand-primary text-lg md:text-2xl font-bold mb-2 md:mb-3">06</span>
+                <h3 className="text-base md:text-lg font-bold text-[#18181B] mb-2">Grant Writing Support</h3>
+                <p className="text-[#18181B] text-xs md:text-base leading-relaxed hidden sm:block">
+                  Develop compelling grant applications and funding proposals with expert guidance.
+                </p>
+                <p className="text-[#18181B] text-xs leading-relaxed sm:hidden">
                   Develop compelling grant applications and funding proposals with expert guidance.
                 </p>
               </div>
@@ -361,41 +379,41 @@ export default function AcademicPage() {
                 </div>
               </div>
 
-              {/* Right Column Grid */}
-              <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              {/* Right Column Grid / Carousel on Mobile */}
+              <div className="lg:col-span-7 flex md:grid md:grid-cols-2 gap-4 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 no-scrollbar w-[calc(100%+4rem)] -mx-8 px-8 scroll-pl-8 md:w-full md:mx-0 md:px-0 md:scroll-pl-0">
                 
                 {/* Card 1 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Academic Researchers</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Researchers with experience across universities, research institutions and industry.</p>
                 </div>
 
                 {/* Card 2 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Statisticians</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Experts in data analysis, study design and interpretation of research findings.</p>
                 </div>
 
                 {/* Card 3 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Scientific Writers</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Support for manuscripts, journal articles, white papers and technical reports.</p>
                 </div>
 
                 {/* Card 4 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Subject Matter Experts</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Specialists across life sciences, healthcare, engineering, social sciences and more.</p>
                 </div>
 
                 {/* Card 5 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Research Consultants</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Guidance on project planning, methodology and research strategy.</p>
                 </div>
 
                 {/* Card 6 */}
-                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300">
+                <div className="flex flex-col bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl shadow-lg shadow-black/5 hover:-translate-y-0.5 transition-all duration-300 w-[85%] sm:w-[60%] shrink-0 snap-start md:w-auto md:shrink">
                   <h3 className="font-bold text-lg text-[#18181B] mb-2">Data Analysts</h3>
                   <p className="text-[#18181B] text-sm leading-relaxed">Support for data management, statistical modelling and research insights.</p>
                 </div>
