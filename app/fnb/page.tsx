@@ -412,46 +412,46 @@ export default function FnbPage() {
               <div className="relative w-full md:w-[85%] lg:w-[80%] mx-auto">
                 {/* Horizontal Line for Desktop */}
                 <div className="hidden md:block absolute top-[73px] left-[16.6%] right-[16.6%] h-[2px] bg-[#D4DEE1] -z-10" />
-                
-                {/* Vertical Line for Mobile */}
-                <div className="md:hidden absolute top-[73px] bottom-[73px] left-1/2 -translate-x-1/2 w-[2px] bg-[#D4DEE1] -z-10" />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-                  
+                {/* Vertical Line for Mobile — aligned to left circle center */}
+                <div className="md:hidden absolute top-[20px] bottom-[20px] left-[19px] w-[2px] bg-[#D4DEE1] -z-10" />
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
+
                   {/* Step 1 */}
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-[147px] h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-4xl font-bold text-[#285B69] mb-6 z-10 shadow-sm">
+                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center">
+                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-base md:text-4xl font-bold text-[#285B69] md:mb-6 z-10 shadow-sm">
                       1
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-[#285B69] mb-2">Tell Us About Your Project</h3>
-                      <p className="text-[#18181B] text-base leading-relaxed">
+                      <h3 className="text-base md:text-xl font-bold text-[#285B69] mb-1 md:mb-2">Tell Us About Your Project</h3>
+                      <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
                         Share your product goals, requirements and timeline.
                       </p>
                     </div>
                   </div>
 
                   {/* Step 2 */}
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-[147px] h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-4xl font-bold text-[#285B69] mb-6 z-10 shadow-sm">
+                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center">
+                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-base md:text-4xl font-bold text-[#285B69] md:mb-6 z-10 shadow-sm">
                       2
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-[#285B69] mb-2">Receive Expert Responses</h3>
-                      <p className="text-[#18181B] text-base leading-relaxed">
+                      <h3 className="text-base md:text-xl font-bold text-[#285B69] mb-1 md:mb-2">Receive Expert Responses</h3>
+                      <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
                         Review proposals from qualified food, beverage and nutrition experts.
                       </p>
                     </div>
                   </div>
 
                   {/* Step 3 */}
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-[147px] h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-4xl font-bold text-[#285B69] mb-6 z-10 shadow-sm">
+                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center">
+                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-base md:text-4xl font-bold text-[#285B69] md:mb-6 z-10 shadow-sm">
                       3
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-[#285B69] mb-2">Start Collaborating</h3>
-                      <p className="text-[#18181B] text-base leading-relaxed">
+                      <h3 className="text-base md:text-xl font-bold text-[#285B69] mb-1 md:mb-2">Start Collaborating</h3>
+                      <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
                         Select the expert who best fits your project and begin working together.
                       </p>
                     </div>
@@ -481,7 +481,7 @@ export default function FnbPage() {
             {/* Left Nav Button */}
             <button
               onClick={handlePrev}
-              className="flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
+              className="hidden md:flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
               aria-label="Previous testimonial"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -502,7 +502,7 @@ export default function FnbPage() {
                 {testimonials.map((t, idx) => (
                   <div
                     key={idx}
-                    className="bg-white/90 backdrop-blur-sm border border-white/20 p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] shadow-lg shadow-black/5 shrink-0 w-full md:w-[calc(50%-16px)]"
+                    className="bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] shadow-lg shadow-black/5 shrink-0 w-full md:w-[calc(50%-16px)]"
                   >
                     <p className="text-zinc-700 text-base italic leading-relaxed mb-6 flex-grow font-normal">
                       &ldquo;{t.quote}&rdquo;
@@ -524,7 +524,7 @@ export default function FnbPage() {
             {/* Right Nav Button */}
             <button
               onClick={handleNext}
-              className="flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
+              className="hidden md:flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
               aria-label="Next testimonial"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

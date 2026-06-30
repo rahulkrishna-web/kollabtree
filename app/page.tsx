@@ -42,40 +42,63 @@ const GlobeIcon = () => (
 
 // Services Icons
 const SkincareIcon = () => (
-  <svg className="w-8 h-8 text-brand-primary group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
-  </svg>
+  <Image
+    src="/skincare_formulation.svg"
+    alt="Skincare Formulation"
+    width={48}
+    height={48}
+    className="w-12 h-12 object-contain"
+  />
 );
 
 const HaircareIcon = () => (
-  <svg className="w-8 h-8 text-brand-primary group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-  </svg>
+  <Image
+    src="/haircare_formulation.svg"
+    alt="Haircare Formulation"
+    width={48}
+    height={48}
+    className="w-12 h-12 object-contain"
+  />
 );
 
 const SunscreenIcon = () => (
-  <svg className="w-8 h-8 text-brand-primary group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <circle cx="12" cy="12" r="4" strokeWidth="2" />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-  </svg>
+  <Image
+    src="/sunscreen_development.svg"
+    alt="Sunscreen Development"
+    width={48}
+    height={48}
+    className="w-12 h-12 object-contain"
+  />
 );
 
 const ReformulationIcon = () => (
-  <svg className="w-8 h-8 text-brand-primary group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-  </svg>
+  <Image
+    src="/product_reformulation.svg"
+    alt="Product Reformulation"
+    width={48}
+    height={48}
+    className="w-12 h-12 object-contain"
+  />
 );
 
 const StabilityIcon = () => (
-  <svg className="w-8 h-8 text-brand-primary group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-  </svg>
+  <Image
+    src="/stability_testing.svg"
+    alt="Stability Testing"
+    width={48}
+    height={48}
+    className="w-12 h-12 object-contain"
+  />
 );
 
 const RegulatoryIcon = () => (
-  <svg className="w-8 h-8 text-brand-primary group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-  </svg>
+  <Image
+    src="/regulatory_support.svg"
+    alt="Regulatory Support"
+    width={48}
+    height={48}
+    className="w-12 h-12 object-contain"
+  />
 );
 
 export default function Home() {
@@ -207,8 +230,9 @@ export default function Home() {
       </header>
 
       {/* 2. Hero Section */}
-      <section className="relative pt-16 pb-[15px] md:pt-24 md:pb-[15px] px-6 isolate">
-        <div className="w-[90%] md:w-[80%] max-w-6xl mx-auto text-center flex flex-col items-center">
+      <section className="relative pt-16 pb-[15px] md:pt-24 md:pb-[15px] isolate">
+        {/* Text content — constrained width, padded to match navbar */}
+        <div className="px-8 md:px-6 w-full md:w-[80%] max-w-6xl mx-auto text-center flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-brand-primary tracking-tight leading-[1.05] mb-6 max-w-5xl">
             Hire Freelance Cosmetic Formulation Experts
           </h1>
@@ -231,29 +255,26 @@ export default function Home() {
             </svg>
             <div className="absolute inset-0 bg-brand-primary-light translate-y-full group-hover:translate-y-0 transition-transform duration-300 -z-0" />
           </a>
+        </div>
 
-          {/* Hero Image Container with Blobs behind */}
-          <div className="relative w-full max-w-4xl overflow-visible select-none">
-            {/* Background Blobs (div.relative container matching layout) */}
-            <div className="absolute inset-0 pointer-events-none z-10 overflow-visible">
-              {/* Blob 1: Top Right (div.animate-background-blob) */}
-              <div className="hero-blob-1 animate-background-blob" />
-              {/* Blob 2: Bottom Left (div.animate-background-blob) */}
-              <div className="hero-blob-2 animate-background-blob-reverse" />
-            </div>
+        {/* Hero Image — navbar-width on mobile, max-w-5xl on desktop */}
+        <div className="relative w-full max-w-5xl mx-auto overflow-visible select-none px-8 md:px-0">
+          {/* Background Blobs */}
+          <div className="absolute inset-0 pointer-events-none z-10 overflow-visible">
+            <div className="hero-blob-1 animate-background-blob" />
+            <div className="hero-blob-2 animate-background-blob-reverse" />
+          </div>
 
-            {/* Hero Image */}
-            <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-zinc-200/50 relative group bg-zinc-100 aspect-[16/9] z-20">
-              <Image
-                src="/hero_lab.png"
-                alt="Cosmetic formulation chemists in lab"
-                fill
-                priority
-                className="object-cover group-hover:scale-101 transition-transform duration-700"
-                sizes="(max-w-1024px) 100vw, 1000px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
+          {/* Hero Image */}
+          <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden z-20">
+            <Image
+              src="/KT_cosmetic_lead_img.png"
+              alt="Cosmetic formulation chemists in lab"
+              width={956}
+              height={576}
+              priority
+              className="w-full h-auto block"
+            />
           </div>
         </div>
       </section>
@@ -324,7 +345,7 @@ export default function Home() {
               
               {/* Card 1 */}
               <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 hover:border-teal-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full">
-                <div className="w-12 h-12 rounded-xl bg-brand-bg-light flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                <div className="mb-6">
                   <SkincareIcon />
                 </div>
                 <h3 className="text-lg font-bold text-brand-primary mb-3">Skincare Formulation</h3>
@@ -335,7 +356,7 @@ export default function Home() {
 
               {/* Card 2 */}
               <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 hover:border-teal-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full">
-                <div className="w-12 h-12 rounded-xl bg-brand-bg-light flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                <div className="mb-6">
                   <HaircareIcon />
                 </div>
                 <h3 className="text-lg font-bold text-brand-primary mb-3">Haircare Formulation</h3>
@@ -346,7 +367,7 @@ export default function Home() {
 
               {/* Card 3 */}
               <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 hover:border-teal-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full">
-                <div className="w-12 h-12 rounded-xl bg-brand-bg-light flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                <div className="mb-6">
                   <SunscreenIcon />
                 </div>
                 <h3 className="text-lg font-bold text-brand-primary mb-3">Sunscreen Development</h3>
@@ -357,7 +378,7 @@ export default function Home() {
 
               {/* Card 4 */}
               <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 hover:border-teal-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full">
-                <div className="w-12 h-12 rounded-xl bg-brand-bg-light flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                <div className="mb-6">
                   <ReformulationIcon />
                 </div>
                 <h3 className="text-lg font-bold text-brand-primary mb-3">Product Reformulation</h3>
@@ -368,7 +389,7 @@ export default function Home() {
 
               {/* Card 5 */}
               <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 hover:border-teal-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full">
-                <div className="w-12 h-12 rounded-xl bg-brand-bg-light flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                <div className="mb-6">
                   <StabilityIcon />
                 </div>
                 <h3 className="text-lg font-bold text-brand-primary mb-3">Stability Testing</h3>
@@ -379,7 +400,7 @@ export default function Home() {
 
               {/* Card 6 */}
               <div className="bg-white p-5 md:p-8 rounded-2xl border border-zinc-100 hover:border-teal-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full">
-                <div className="w-12 h-12 rounded-xl bg-brand-bg-light flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
+                <div className="mb-6">
                   <RegulatoryIcon />
                 </div>
                 <h3 className="text-lg font-bold text-brand-primary mb-3">Regulatory Support</h3>
@@ -397,7 +418,7 @@ export default function Home() {
       {/* 5. Work with Experienced Cosmetic Industry Experts Section */}
       <section className="px-[15px] py-[15px]">
         <div 
-          className="rounded-3xl text-white relative overflow-hidden py-16 md:py-24 px-8 md:px-12"
+          className="rounded-3xl text-white relative py-16 md:py-24 px-8 md:px-12 overflow-visible lg:overflow-hidden"
           style={{ background: 'linear-gradient(87.76deg, #265B69 1.88%, #0B4027 187.11%)' }}
         >
           {/* Background visual detail */}
@@ -420,12 +441,12 @@ export default function Home() {
 
               {/* Right side expert cards: scrollable on mobile, grid on desktop */}
               <div className="lg:col-span-7 w-full">
-              
-              {/* Mobile Carousel / Desktop Grid */}
-              <div className="overflow-x-auto no-scrollbar flex flex-nowrap pb-6 lg:pb-0 lg:overflow-visible lg:flex-none lg:grid lg:grid-cols-2 gap-5 px-1 lg:px-0 scroll-smooth snap-x">
+
+              {/* Mobile Carousel / Desktop Grid — -mx-8 breaks out of parent padding, px-8 restores leading space */}
+              <div className="-mx-8 lg:mx-0 overflow-x-auto no-scrollbar flex flex-nowrap pb-4 lg:pb-0 lg:overflow-visible lg:flex-none lg:grid lg:grid-cols-2 gap-4 lg:gap-5 scroll-smooth snap-x snap-mandatory px-8 lg:px-0">
                 
                 {/* Expert Card 1 */}
-                <div className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl snap-center transition-colors duration-300 shadow-lg shadow-black/5">
+                <div className="flex-shrink-0 w-[75vw] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl snap-start scroll-ml-8 transition-colors duration-300 shadow-lg shadow-black/5">
                   <h3 className="text-lg font-bold mb-2 text-zinc-900">Cosmetic Chemists</h3>
                   <p className="text-zinc-700 text-sm leading-relaxed">
                     Experts in product formulation, ingredient selection and product performance.
@@ -433,7 +454,7 @@ export default function Home() {
                 </div>
 
                 {/* Expert Card 2 */}
-                <div className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl snap-center transition-colors duration-300 shadow-lg shadow-black/5">
+                <div className="flex-shrink-0 w-[75vw] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl snap-start scroll-ml-8 transition-colors duration-300 shadow-lg shadow-black/5">
                   <h3 className="text-lg font-bold mb-2 text-zinc-900">Formulation Scientists</h3>
                   <p className="text-zinc-700 text-sm leading-relaxed">
                     Support for new product development, optimisation and scale-up.
@@ -441,7 +462,7 @@ export default function Home() {
                 </div>
 
                 {/* Expert Card 3 */}
-                <div className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl snap-center transition-colors duration-300 shadow-lg shadow-black/5">
+                <div className="flex-shrink-0 w-[75vw] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl snap-start scroll-ml-8 transition-colors duration-300 shadow-lg shadow-black/5">
                   <h3 className="text-lg font-bold mb-2 text-zinc-900">Regulatory Affairs Specialists</h3>
                   <p className="text-zinc-700 text-sm leading-relaxed">
                     Guidance on compliance requirements across global markets.
@@ -449,7 +470,7 @@ export default function Home() {
                 </div>
 
                 {/* Expert Card 4 */}
-                <div className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl snap-center transition-colors duration-300 shadow-lg shadow-black/5">
+                <div className="flex-shrink-0 w-[75vw] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl snap-start scroll-ml-8 transition-colors duration-300 shadow-lg shadow-black/5">
                   <h3 className="text-lg font-bold mb-2 text-zinc-900">Product Development Consultants</h3>
                   <p className="text-zinc-700 text-sm leading-relaxed">
                     Strategic support for product launches and commercialisation.
@@ -457,7 +478,7 @@ export default function Home() {
                 </div>
 
                 {/* Expert Card 5 */}
-                <div className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl snap-center transition-colors duration-300 shadow-lg shadow-black/5">
+                <div className="flex-shrink-0 w-[75vw] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl snap-start scroll-ml-8 transition-colors duration-300 shadow-lg shadow-black/5">
                   <h3 className="text-lg font-bold mb-2 text-zinc-900">Toxicologists</h3>
                   <p className="text-zinc-700 text-sm leading-relaxed">
                     Safety assessments and ingredient evaluations.
@@ -465,12 +486,15 @@ export default function Home() {
                 </div>
 
                 {/* Expert Card 6 */}
-                <div className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl snap-center transition-colors duration-300 shadow-lg shadow-black/5">
+                <div className="flex-shrink-0 w-[75vw] sm:w-[320px] lg:w-auto bg-white/90 backdrop-blur-sm border border-white/20 p-6 rounded-2xl snap-start scroll-ml-8 transition-colors duration-300 shadow-lg shadow-black/5">
                   <h3 className="text-lg font-bold mb-2 text-zinc-900">Stability Specialists</h3>
                   <p className="text-zinc-700 text-sm leading-relaxed">
                     Support for product validation and shelf-life studies.
                   </p>
                 </div>
+
+                {/* Trailing spacer — ensures last card scrolls fully into view on mobile */}
+                <div className="flex-shrink-0 w-4 lg:hidden" aria-hidden="true" />
 
               </div>
 
@@ -506,46 +530,46 @@ export default function Home() {
               <div className="relative w-full md:w-[85%] lg:w-[80%] mx-auto">
                 {/* Horizontal Line for Desktop */}
                 <div className="hidden md:block absolute top-[73px] left-[16.6%] right-[16.6%] h-[2px] bg-[#D4DEE1] -z-10" />
-                
-                {/* Vertical Line for Mobile */}
-                <div className="md:hidden absolute top-[73px] bottom-[73px] left-1/2 -translate-x-1/2 w-[2px] bg-[#D4DEE1] -z-10" />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-                  
+                {/* Vertical Line for Mobile — aligned to left circle center */}
+                <div className="md:hidden absolute top-[20px] bottom-[20px] left-[19px] w-[2px] bg-[#D4DEE1] -z-10" />
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
+
                   {/* Step 1 */}
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-[147px] h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-4xl font-bold text-[#265B69] mb-6 z-10 shadow-sm">
+                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center">
+                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-base md:text-4xl font-bold text-[#265B69] md:mb-6 z-10 shadow-sm">
                       1
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-brand-primary mb-2">Tell Us About Your Project</h3>
-                      <p className="text-[#18181B] text-base leading-relaxed">
+                      <h3 className="text-base md:text-xl font-bold text-brand-primary mb-1 md:mb-2">Tell Us About Your Project</h3>
+                      <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
                         Share your formulation requirements, objectives and timeline.
                       </p>
                     </div>
                   </div>
 
                   {/* Step 2 */}
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-[147px] h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-4xl font-bold text-[#265B69] mb-6 z-10 shadow-sm">
+                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center">
+                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-base md:text-4xl font-bold text-[#265B69] md:mb-6 z-10 shadow-sm">
                       2
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-brand-primary mb-2">Receive Expert Responses</h3>
-                      <p className="text-[#18181B] text-base leading-relaxed">
+                      <h3 className="text-base md:text-xl font-bold text-brand-primary mb-1 md:mb-2">Receive Expert Responses</h3>
+                      <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
                         Review proposals from qualified cosmetic formulation professionals.
                       </p>
                     </div>
                   </div>
 
                   {/* Step 3 */}
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-[147px] h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-4xl font-bold text-[#265B69] mb-6 z-10 shadow-sm">
+                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center">
+                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-base md:text-4xl font-bold text-[#265B69] md:mb-6 z-10 shadow-sm">
                       3
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-brand-primary mb-2">Start Collaborating</h3>
-                      <p className="text-[#18181B] text-base leading-relaxed">
+                      <h3 className="text-base md:text-xl font-bold text-brand-primary mb-1 md:mb-2">Start Collaborating</h3>
+                      <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
                         Choose the expert that best fits your project and begin working together.
                       </p>
                     </div>
@@ -578,7 +602,7 @@ export default function Home() {
             {/* Left Nav Button */}
             <button
               onClick={handlePrev}
-              className="flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
+              className="hidden md:flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
               aria-label="Previous testimonial"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -599,7 +623,7 @@ export default function Home() {
                 {testimonials.map((t, idx) => (
                   <div
                     key={idx}
-                    className="bg-white/90 backdrop-blur-sm border border-white/20 p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] shadow-lg shadow-black/5 shrink-0 w-full md:w-[calc(50%-16px)]"
+                    className="bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] shadow-lg shadow-black/5 shrink-0 w-full md:w-[calc(50%-16px)]"
                   >
                     <p className="text-zinc-700 text-base italic leading-relaxed mb-6 flex-grow">
                       &ldquo;{t.quote}&rdquo;
@@ -621,7 +645,7 @@ export default function Home() {
             {/* Right Nav Button */}
             <button
               onClick={handleNext}
-              className="flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
+              className="hidden md:flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
               aria-label="Next testimonial"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -690,7 +714,7 @@ export default function Home() {
               {/* Right: scientists discussion photo */}
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-zinc-100">
                 <Image
-                  src="/scientists_discussion.png"
+                  src="/popular_cosmetic_cropped.png"
                   alt="Scientists discussing formulas in a lab"
                   fill
                   className="object-cover"
