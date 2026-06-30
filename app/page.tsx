@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 // SVG Icons as inline components for clean bundle and zero dependency friction
@@ -81,6 +81,7 @@ const RegulatoryIcon = () => (
 export default function Home() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const testimonials = [
     {
@@ -94,8 +95,50 @@ export default function Home() {
       role: "R&D Director, Organics Lab",
       quote: "Great pricing, good quality chemist, has everything you may need. Turnaround super quick with milestones. Everything is in your control. I found the site is very safe and simple.",
       initials: "JA"
+    },
+    {
+      name: "Dr. Sarah Jenkins",
+      role: "Lead Formulator, Glow Botanicals",
+      quote: "Kolabtree connected us with an exceptional toxicologist who cleared our EU regulatory hurdle in days. The milestone system kept the project on track and within budget.",
+      initials: "SJ"
+    },
+    {
+      name: "Marcus Vance",
+      role: "VP of Product, Apex Haircare",
+      quote: "We needed to reformulate our entire conditioning line to meet clean beauty standards. The expert we hired was professional, responsive, and delivered stable, high-performing formulas.",
+      initials: "MV"
     }
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const maxIdx = isDesktop ? testimonials.length - 2 : testimonials.length - 1;
+    if (activeTestimonial > maxIdx) {
+      setActiveTestimonial(maxIdx);
+    }
+  }, [isDesktop, activeTestimonial, testimonials.length]);
+
+  const handlePrev = () => {
+    setActiveTestimonial((prev) => {
+      const maxIdx = isDesktop ? testimonials.length - 2 : testimonials.length - 1;
+      return prev === 0 ? maxIdx : prev - 1;
+    });
+  };
+
+  const handleNext = () => {
+    setActiveTestimonial((prev) => {
+      const maxIdx = isDesktop ? testimonials.length - 2 : testimonials.length - 1;
+      return prev >= maxIdx ? 0 : prev + 1;
+    });
+  };
 
   const faqs = [
     {
@@ -165,7 +208,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-brand-primary tracking-tight leading-[1.05] mb-6 max-w-5xl">
             Hire Freelance Cosmetic Formulation Experts
           </h1>
-          <p className="text-zinc-600 text-base md:text-lg leading-relaxed mb-10 max-w-3xl">
+          <p className="text-zinc-600 text-base md:text-lg leading-relaxed mb-10 max-w-5xl">
             Develop skincare, haircare and personal care products with support from experienced cosmetic chemists, formulation scientists and regulatory consultants. Whether you&apos;re creating a new product or improving an existing formulation, Kolabtree connects you with experts who can help bring your ideas to market.
           </p>
           
@@ -358,19 +401,12 @@ export default function Home() {
             
             {/* Left side info */}
             <div className="lg:col-span-4 lg:sticky lg:top-32 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <span className="text-emerald-300/90 text-xs font-bold uppercase tracking-widest mb-4">Talent Pool</span>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
                 Work with Experienced Cosmetic Industry Experts
               </h2>
-              <p className="text-teal-50/80 text-sm md:text-base leading-relaxed mb-8 max-w-md">
+              <p className="text-teal-50/80 text-sm md:text-base leading-relaxed max-w-md">
                 Kolabtree provides access to specialists across cosmetic science, formulation development and regulatory affairs.
               </p>
-              <a
-                href="#contact"
-                className="px-6 py-3 bg-teal-400 hover:bg-teal-300 active:scale-97 text-brand-primary-dark rounded-full font-bold shadow-md transition-all inline-flex items-center gap-2"
-              >
-                Hire Specialists
-              </a>
             </div>
 
             {/* Right side expert cards: scrollable on mobile, grid on desktop */}
@@ -529,12 +565,12 @@ export default function Home() {
           </h2>
 
           {/* Testimonial slider / Grid */}
-          <div className="relative w-full mx-auto flex items-center justify-center gap-4">
+          <div className="relative w-full mx-auto flex items-center justify-center gap-2 md:gap-4">
             
-            {/* Left Nav Button (Desktop only) */}
+            {/* Left Nav Button */}
             <button
-              onClick={() => setActiveTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-              className="hidden md:flex w-12 h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all"
+              onClick={handlePrev}
+              className="flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
               aria-label="Previous testimonial"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -543,16 +579,19 @@ export default function Home() {
             </button>
 
             {/* Testimonials container */}
-            <div className="flex-1 w-full overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 transition-all duration-500">
-                
-                {/* Desktop displays both side-by-side. Mobile displays the active slider card */}
+            <div className="flex-1 w-full overflow-hidden py-4">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out gap-6 md:gap-8"
+                style={{
+                  transform: isDesktop
+                    ? `translateX(calc(-${activeTestimonial} * (50% + 16px)))`
+                    : `translateX(calc(-${activeTestimonial} * (100% + 24px)))`
+                }}
+              >
                 {testimonials.map((t, idx) => (
                   <div
                     key={idx}
-                    className={`bg-white/90 backdrop-blur-sm border border-white/20 p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] transition-all duration-300 shadow-lg shadow-black/5 ${
-                      activeTestimonial === idx ? "block" : "hidden md:flex"
-                    }`}
+                    className="bg-white/90 backdrop-blur-sm border border-white/20 p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] shadow-lg shadow-black/5 shrink-0 w-full md:w-[calc(50%-16px)]"
                   >
                     <p className="text-zinc-700 text-base italic leading-relaxed mb-6 flex-grow">
                       &ldquo;{t.quote}&rdquo;
@@ -568,14 +607,13 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-
               </div>
             </div>
 
-            {/* Right Nav Button (Desktop only) */}
+            {/* Right Nav Button */}
             <button
-              onClick={() => setActiveTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
-              className="hidden md:flex w-12 h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all"
+              onClick={handleNext}
+              className="flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
               aria-label="Next testimonial"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -585,14 +623,14 @@ export default function Home() {
 
           </div>
 
-          {/* Dots Indicators (Mobile only) */}
-          <div className="flex justify-center gap-2 mt-8 md:hidden">
-            {testimonials.map((_, idx) => (
+          {/* Dots Indicators */}
+          <div className="flex justify-center gap-2 mt-8">
+            {testimonials.slice(0, isDesktop ? testimonials.length - 1 : testimonials.length).map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveTestimonial(idx)}
                 className={`w-3.5 h-1.5 rounded-full transition-all duration-200 ${
-                  activeTestimonial === idx ? "bg-teal-400 w-6" : "bg-teal-800"
+                  activeTestimonial === idx ? "bg-teal-400 w-6" : "bg-teal-800 hover:bg-teal-700"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -610,7 +648,6 @@ export default function Home() {
               
               {/* Left: bullet lists */}
               <div className="lg:col-span-6">
-                <span className="text-teal-600 text-xs font-bold uppercase tracking-widest mb-4 block">Categories</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-brand-primary tracking-tight mb-4">
                   Popular Cosmetic Formulation Projects
                 </h2>

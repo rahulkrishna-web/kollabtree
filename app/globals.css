@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://fonts.cdnfonts.com/s/27118/Mark Simonson  Proxima Nova Semibold.woff') format('woff');
+}
+
 :root {
   --background: #F6F3F3;
-  --foreground: #171717;
+  --foreground: #18181B;
 }
 
 @theme inline {
