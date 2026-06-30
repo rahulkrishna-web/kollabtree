@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 // SVG Icons as inline components for clean bundle and zero dependency friction
@@ -611,19 +611,19 @@ export default function Home() {
             </button>
 
             {/* Testimonials container */}
-            <div className="flex-1 w-full overflow-hidden py-4">
+            <div 
+              className="flex-1 w-[calc(100%+3rem)] -mx-6 px-6 md:w-full md:mx-0 md:px-0 overflow-x-auto md:overflow-hidden py-4 no-scrollbar snap-x snap-mandatory md:snap-none"
+            >
               <div 
-                className="flex transition-transform duration-500 ease-in-out gap-6 md:gap-8"
-                style={{
-                  transform: isDesktop
-                    ? `translateX(calc(-${activeTestimonial} * (50% + 16px)))`
-                    : `translateX(calc(-${activeTestimonial} * (100% + 24px)))`
-                }}
+                className="flex md:transition-transform md:duration-500 md:ease-in-out gap-6 md:gap-8"
+                style={isDesktop ? {
+                  transform: `translateX(calc(-${activeTestimonial} * (50% + 16px)))`
+                } : {}}
               >
                 {testimonials.map((t, idx) => (
                   <div
                     key={idx}
-                    className="bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] shadow-lg shadow-black/5 shrink-0 w-full md:w-[calc(50%-16px)]"
+                    className="bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] shadow-lg shadow-black/5 shrink-0 w-full md:w-[calc(50%-16px)] snap-start scroll-ml-6 md:scroll-ml-0 md:snap-none"
                   >
                     <p className="text-zinc-700 text-base italic leading-relaxed mb-6 flex-grow">
                       &ldquo;{t.quote}&rdquo;
@@ -655,19 +655,6 @@ export default function Home() {
 
           </div>
 
-          {/* Dots Indicators */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.slice(0, isDesktop ? testimonials.length - 1 : testimonials.length).map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActiveTestimonial(idx)}
-                className={`w-3.5 h-1.5 rounded-full transition-all duration-200 ${
-                  activeTestimonial === idx ? "bg-teal-400 w-6" : "bg-teal-800 hover:bg-teal-700"
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
 
         </div>
       </section>
@@ -680,10 +667,10 @@ export default function Home() {
               
               {/* Left: bullet lists */}
               <div>
-                <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-4">
+                <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-4 text-center md:text-left">
                   Popular Cosmetic Formulation Projects
                 </h2>
-                <p className="text-zinc-600 text-base md:text-lg leading-relaxed mb-8">
+                <p className="text-zinc-600 text-base md:text-lg leading-relaxed mb-8 text-center md:text-left">
                   Our experts support projects across skincare, haircare, cosmetics and personal care categories.
                 </p>
 
@@ -823,56 +810,60 @@ export default function Home() {
       </section>
 
       {/* 11. Footer */}
-      <footer className="bg-zinc-50 py-20 md:py-24 px-6">
+      <footer className="bg-zinc-50 py-16 md:py-24">
         <div className="w-full px-8 md:px-12">
           
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 pb-12 border-b border-zinc-200">
+          <div className="flex flex-col md:grid md:grid-cols-12 gap-y-8 md:gap-16 pb-8 md:pb-12 border-b border-zinc-200">
             
             {/* Column 1: Logo */}
-            <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="md:col-span-4 flex flex-col items-start text-left">
               <div className="mb-4">
                 <Image
                   src="/Kolabtree_logo.svg"
                   alt="Kolabtree Logo"
                   width={159}
                   height={36}
-                  className="h-9 w-auto"
+                  className="h-7 md:h-9 w-auto"
                 />
               </div>
-              <p className="text-zinc-600 text-sm leading-relaxed max-w-xs">
+              <p className="hidden md:block text-zinc-600 text-sm leading-relaxed max-w-xs">
                 The global freelance marketplace connecting companies with specialized scientists and academic experts.
               </p>
             </div>
 
-            {/* Column 2: Address */}
-            <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
-              <h4 className="text-sm font-bold text-brand-primary uppercase tracking-wider mb-4">Address</h4>
-              <div className="text-zinc-600 text-sm space-y-2">
-                <p>123 Market Street</p>
-                <p>San Francisco, CA 94103</p>
-                <p>United States</p>
+            {/* Mobile Flex / Desktop Grid wrapper for Address & Navigation */}
+            <div className="flex justify-between w-full md:col-span-8 md:grid md:grid-cols-2 md:gap-16">
+              
+              {/* Column 2: Address */}
+              <div className="flex flex-col items-start text-left">
+                <h4 className="text-[10px] md:text-sm font-bold text-brand-primary uppercase tracking-wider mb-3 md:mb-4">Address</h4>
+                <div className="text-zinc-600 text-[10px] md:text-sm space-y-1.5 md:space-y-2">
+                  <p>123 Market Street</p>
+                  <p>San Francisco, CA 94103</p>
+                  <p>United States</p>
+                </div>
               </div>
-            </div>
 
-            {/* Column 3: Navigation */}
-            <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
-              <h4 className="text-sm font-bold text-brand-primary uppercase tracking-wider mb-4">Navigation</h4>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-zinc-600 text-sm font-medium">
-                <a href="#" className="hover:text-brand-primary transition-colors">Website</a>
-                <a href="#" className="hover:text-brand-primary transition-colors">Cosmetic Formulation</a>
-                <a href="#" className="hover:text-brand-primary transition-colors">Academic Research</a>
-                <a href="#" className="hover:text-brand-primary transition-colors">Food &amp; Beverage</a>
-                <a href="#" className="hover:text-brand-primary transition-colors">Medical Research</a>
+              {/* Column 3: Navigation */}
+              <div className="flex flex-col items-start text-left">
+                <h4 className="text-[10px] md:text-sm font-bold text-brand-primary uppercase tracking-wider mb-3 md:mb-4">Navigation</h4>
+                <div className="flex flex-col md:grid md:grid-cols-2 gap-y-1.5 md:gap-x-8 md:gap-y-3 text-zinc-600 text-[10px] md:text-sm font-medium">
+                  <a href="#" className="hover:text-brand-primary transition-colors">Website</a>
+                  <a href="#" className="hover:text-brand-primary transition-colors">Cosmetic Formulation</a>
+                  <a href="#" className="hover:text-brand-primary transition-colors">Academic Research</a>
+                  <a href="#" className="hover:text-brand-primary transition-colors">Food &amp; Beverage</a>
+                  <a href="#" className="hover:text-brand-primary transition-colors">Medical Research</a>
+                </div>
               </div>
-            </div>
 
+            </div>
           </div>
 
           {/* Bottom Social & Copyright */}
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="pt-6 flex flex-row items-center justify-between gap-4 w-full">
             
             {/* Social icons */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {[
                 { name: "Instagram", path: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" },
                 { name: "Twitter", path: "M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" },
@@ -882,10 +873,10 @@ export default function Home() {
                 <a
                   key={idx}
                   href="#"
-                  className="w-8 h-8 rounded-full border border-zinc-300 flex items-center justify-center text-zinc-500 hover:text-brand-primary hover:border-brand-primary transition-all duration-200"
+                  className="w-4 h-4 md:w-8 md:h-8 md:rounded-full md:border md:border-zinc-300 flex items-center justify-center text-zinc-500 hover:text-brand-primary hover:border-brand-primary transition-all duration-200"
                   aria-label={`Visit our ${social.name}`}
                 >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" viewBox="0 0 24 24">
                     <path d={social.path} />
                   </svg>
                 </a>
@@ -893,7 +884,7 @@ export default function Home() {
             </div>
 
             {/* Copyright */}
-            <span className="text-zinc-500 text-xs font-medium tracking-wide">
+            <span className="text-zinc-500 text-[9px] md:text-xs font-medium tracking-wide">
               &copy; 2026 Kolabtree. All rights reserved.
             </span>
 

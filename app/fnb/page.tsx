@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 // Simple custom SVG for Trees Logo
@@ -102,6 +102,7 @@ export default function FnbPage() {
     });
   };
 
+
   const faqs = [
     {
       question: "How does the hiring process work?",
@@ -195,7 +196,7 @@ export default function FnbPage() {
             {/* Hero Image */}
             <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-zinc-200/50 relative group bg-zinc-100 aspect-[16/11] z-20">
               <Image
-                src="/fnb_hero_nutritionist.png"
+                src="/fnb_lead.png"
                 alt="Food scientist and nutritionist writing on clipboard"
                 fill
                 priority
@@ -208,7 +209,7 @@ export default function FnbPage() {
       </section>
 
       {/* 3. Benefits Bar (Marquee, No BG/Border) */}
-      <section className="w-full py-[15px] overflow-hidden relative z-10 bg-transparent">
+      <section className="w-full py-8 md:py-12 overflow-hidden relative z-10 bg-transparent">
         <div className="flex animate-marquee whitespace-nowrap">
           {[0, 1].map((setIdx) => (
             <div key={setIdx} className="flex shrink-0 items-center gap-10 px-5 text-[#285B69] text-sm md:text-base font-semibold">
@@ -249,77 +250,87 @@ export default function FnbPage() {
 
 
       {/* 3. Food, Beverage & Nutrition Services Section (Card inside Card) */}
-      <section className="py-[15px] px-[15px] bg-zinc-50/50">
-        <div>
-          <div className="bg-white rounded-3xl border border-zinc-200/60 p-8 md:p-16 shadow-xl shadow-zinc-200/30">
+      <section className="py-[15px] px-[15px]">
+        <div 
+          className="rounded-3xl relative overflow-hidden py-16 md:py-24 px-8 md:px-12"
+          style={{ background: 'linear-gradient(180deg, #265B69 0%, #0B4027 100%)' }}
+        >
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-[32px] md:text-[42px] font-medium text-white leading-[1.2] tracking-[-1.5px] mb-6">
+              Food, Beverage &amp; Nutrition Services
+            </h2>
+            <p className="text-teal-50 text-base md:text-lg leading-relaxed">
+              From product development and formulation to nutritional analysis and regulatory support, Kolabtree experts can assist with a wide range of food and beverage innovation projects.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             
-            <div className="text-left max-w-3xl mb-12">
-              <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-6">
-                Food, Beverage &amp; Nutrition Services
-              </h2>
-              <p className="text-[#18181B] text-base md:text-lg leading-relaxed">
-                From product development and formulation to nutritional analysis and regulatory support, Kolabtree experts can assist with a wide range of food and beverage innovation projects.
+            {/* Card 1 */}
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-12 h-12 mb-6">
+                <Image src="/fnb_icons/food_product_development.png" alt="Food Product Development" width={48} height={48} className="w-full h-full object-contain" />
+              </div>
+              <h3 className="text-lg font-bold text-[#18181B] mb-2">Food Product Development</h3>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+                Develop new food products with support from experienced food scientists and formulation specialists.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              
-              {/* Card 1 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-[#285B69] text-xl md:text-2xl font-bold mb-3">01</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Food Product Development</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Develop new food products with support from experienced food scientists and formulation specialists.
-                </p>
+            {/* Card 2 */}
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-12 h-12 mb-6">
+                <Image src="/fnb_icons/product_reformulation.png" alt="Product Reformulation" width={48} height={48} className="w-full h-full object-contain" />
               </div>
-
-              {/* Card 2 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-[#285B69] text-xl md:text-2xl font-bold mb-3">02</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Product Reformulation</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Improve taste, texture, nutritional value, shelf life or manufacturing efficiency for existing products.
-                </p>
-              </div>
-
-              {/* Card 3 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-[#285B69] text-xl md:text-2xl font-bold mb-3">03</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Beverage Formulation</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Create functional beverages and innovative beverage products tailored to your target market.
-                </p>
-              </div>
-
-              {/* Card 4 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-[#285B69] text-xl md:text-2xl font-bold mb-3">04</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Shelf-Life &amp; Stability Studies</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Assess product stability, quality and shelf life under different storage and environmental conditions.
-                </p>
-              </div>
-
-              {/* Card 5 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-[#285B69] text-xl md:text-2xl font-bold mb-3">05</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Nutrition Consulting</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Work with qualified nutrition experts to evaluate ingredients, nutritional profiles and health claims.
-                </p>
-              </div>
-
-              {/* Card 6 */}
-              <div className="bg-white p-6 md:p-8 rounded-2xl border border-zinc-200/50 shadow-sm hover:border-teal-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full text-left">
-                <span className="text-[#285B69] text-xl md:text-2xl font-bold mb-3">06</span>
-                <h3 className="text-lg font-bold text-[#18181B] mb-2">Regulatory Support</h3>
-                <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
-                  Receive guidance on food labelling, ingredient compliance, nutritional claims and market-specific regulations.
-                </p>
-              </div>
-
+              <h3 className="text-lg font-bold text-[#18181B] mb-2">Product Reformulation</h3>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+                Improve taste, texture, nutritional value, shelf life or manufacturing efficiency for existing products.
+              </p>
             </div>
 
+            {/* Card 3 */}
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-12 h-12 mb-6">
+                <Image src="/fnb_icons/beverage_formulation.png" alt="Beverage Formulation" width={48} height={48} className="w-full h-full object-contain" />
+              </div>
+              <h3 className="text-lg font-bold text-[#18181B] mb-2">Beverage Formulation</h3>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+                Create functional beverages and innovative beverage products tailored to your target market.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-12 h-12 mb-6">
+                <Image src="/fnb_icons/shelf_life.png" alt="Shelf-Life & Stability Studies" width={48} height={48} className="w-full h-full object-contain" />
+              </div>
+              <h3 className="text-lg font-bold text-[#18181B] mb-2">Shelf-Life &amp; Stability Studies</h3>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+                Assess product stability, quality and shelf life under different storage and environmental conditions.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-12 h-12 mb-6">
+                <Image src="/fnb_icons/nutrition_consulting.png" alt="Nutrition Consulting" width={48} height={48} className="w-full h-full object-contain" />
+              </div>
+              <h3 className="text-lg font-bold text-[#18181B] mb-2">Nutrition Consulting</h3>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+                Work with qualified nutrition experts to evaluate ingredients, nutritional profiles and health claims.
+              </p>
+            </div>
+
+            {/* Card 6 */}
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-12 h-12 mb-6">
+                <Image src="/fnb_icons/regulatory_support.png" alt="Regulatory Support" width={48} height={48} className="w-full h-full object-contain" />
+              </div>
+              <h3 className="text-lg font-bold text-[#18181B] mb-2">Regulatory Support</h3>
+              <p className="text-zinc-600 text-sm md:text-base leading-relaxed">
+                Receive guidance on food labelling, ingredient compliance, nutritional claims and market-specific regulations.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -328,7 +339,7 @@ export default function FnbPage() {
       <section className="px-[15px] py-[15px]">
         <div 
           className="rounded-3xl text-white relative overflow-hidden py-16 md:py-24 px-8 md:px-12"
-          style={{ background: 'linear-gradient(87.76deg, #285B69 1.88%, #0B4027 187.11%)' }}
+          style={{ background: 'linear-gradient(135deg, #27A469 0%, #265B69 100%)' }}
         >
           {/* Background visual detail */}
           <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-white/5 -skew-x-12 pointer-events-none" />
@@ -395,50 +406,57 @@ export default function FnbPage() {
       </section>
 
       {/* 5. How Kolabtree Works (Connecting Lines) */}
-      <section className="py-[15px] px-[15px] bg-[#fcfafa]">
+      <section className="py-[15px] px-[15px]">
         <div>
-          <div className="bg-white rounded-3xl border border-zinc-100 p-8 md:p-16 shadow-sm relative overflow-hidden">
+          <div 
+            className="rounded-3xl p-8 md:p-16 shadow-sm relative overflow-hidden"
+            style={{ background: 'linear-gradient(135deg, #265B69 0%, #0B4027 100%)' }}
+          >
             <div className="w-full relative z-10">
               
               <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-4">
+                <h2 className="text-[32px] md:text-[42px] font-medium text-white leading-[1.2] tracking-[-1.5px] mb-4">
                   How Kolabtree Works
                 </h2>
-                <p className="text-[#18181B] text-base md:text-lg leading-relaxed">
+                <p className="text-teal-50 text-base md:text-lg leading-relaxed">
                   Connect with qualified food, beverage and nutrition experts in three simple steps.
                 </p>
               </div>
 
               <div className="relative w-full md:w-[85%] lg:w-[80%] mx-auto">
-                {/* Horizontal Line for Desktop */}
-                <div className="hidden md:block absolute top-[73px] left-[16.6%] right-[16.6%] h-[2px] bg-[#D4DEE1] -z-10" />
-
-                {/* Vertical Line for Mobile — aligned to left circle center */}
-                <div className="md:hidden absolute top-[20px] bottom-[20px] left-[19px] w-[2px] bg-[#D4DEE1] -z-10" />
-
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
 
                   {/* Step 1 */}
-                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center">
-                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-base md:text-4xl font-bold text-[#285B69] md:mb-6 z-10 shadow-sm">
+                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center relative z-10">
+                    {/* Desktop Horizontal Line */}
+                    <div className="hidden md:block absolute top-[72.5px] left-[calc(50%+73.5px)] w-[calc(100%-99px)] h-[2px] bg-white/20 -z-10" />
+                    {/* Mobile Vertical Line */}
+                    <div className="md:hidden absolute top-[40px] left-[19px] w-[2px] h-[calc(100%+32px-40px)] bg-white/20 -z-10" />
+                    
+                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-white/20 flex items-center justify-center text-base md:text-4xl font-bold text-white md:mb-6 shadow-sm">
                       1
                     </div>
                     <div>
-                      <h3 className="text-base md:text-xl font-bold text-[#285B69] mb-1 md:mb-2">Tell Us About Your Project</h3>
-                      <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+                      <h3 className="text-base md:text-xl font-bold text-white mb-1 md:mb-2">Tell Us About Your Project</h3>
+                      <p className="text-teal-50 text-sm md:text-base leading-relaxed">
                         Share your product goals, requirements and timeline.
                       </p>
                     </div>
                   </div>
 
                   {/* Step 2 */}
-                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center">
-                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-base md:text-4xl font-bold text-[#285B69] md:mb-6 z-10 shadow-sm">
+                  <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center relative z-10">
+                    {/* Desktop Horizontal Line */}
+                    <div className="hidden md:block absolute top-[72.5px] left-[calc(50%+73.5px)] w-[calc(100%-99px)] h-[2px] bg-white/20 -z-10" />
+                    {/* Mobile Vertical Line */}
+                    <div className="md:hidden absolute top-[40px] left-[19px] w-[2px] h-[calc(100%+32px-40px)] bg-white/20 -z-10" />
+                    
+                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-white/20 flex items-center justify-center text-base md:text-4xl font-bold text-white md:mb-6 shadow-sm">
                       2
                     </div>
                     <div>
-                      <h3 className="text-base md:text-xl font-bold text-[#285B69] mb-1 md:mb-2">Receive Expert Responses</h3>
-                      <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+                      <h3 className="text-base md:text-xl font-bold text-white mb-1 md:mb-2">Receive Expert Responses</h3>
+                      <p className="text-teal-50 text-sm md:text-base leading-relaxed">
                         Review proposals from qualified food, beverage and nutrition experts.
                       </p>
                     </div>
@@ -446,12 +464,12 @@ export default function FnbPage() {
 
                   {/* Step 3 */}
                   <div className="flex flex-row md:flex-col items-start md:items-center gap-4 md:gap-0 text-left md:text-center">
-                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-base md:text-4xl font-bold text-[#285B69] md:mb-6 z-10 shadow-sm">
+                    <div className="w-10 h-10 md:w-[147px] md:h-[147px] shrink-0 rounded-full bg-white/20 flex items-center justify-center text-base md:text-4xl font-bold text-white md:mb-6 z-10 shadow-sm">
                       3
                     </div>
                     <div>
-                      <h3 className="text-base md:text-xl font-bold text-[#285B69] mb-1 md:mb-2">Start Collaborating</h3>
-                      <p className="text-[#18181B] text-sm md:text-base leading-relaxed">
+                      <h3 className="text-base md:text-xl font-bold text-white mb-1 md:mb-2">Start Collaborating</h3>
+                      <p className="text-teal-50 text-sm md:text-base leading-relaxed">
                         Select the expert who best fits your project and begin working together.
                       </p>
                     </div>
@@ -468,11 +486,10 @@ export default function FnbPage() {
       {/* 6. Testimonials Section (FnB matching design) */}
       <section className="py-[15px] px-[15px]">
         <div 
-          className="text-white rounded-3xl py-12 md:py-16 px-6 md:px-12 text-center relative overflow-hidden shadow-xl shadow-teal-900/10"
-          style={{ background: 'linear-gradient(94.51deg, #27A469 -150.94%, #285B69 89.82%)' }}
+          className="bg-white rounded-3xl py-12 md:py-16 px-6 md:px-12 text-center relative overflow-hidden shadow-sm border border-zinc-100"
         >
           
-          <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-12 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-medium tracking-[-1.5px] mb-12 max-w-3xl mx-auto text-[#18181B]">
             Trusted by Food &amp; Beverage Innovators
           </h2>
 
@@ -481,39 +498,40 @@ export default function FnbPage() {
             {/* Left Nav Button */}
             <button
               onClick={handlePrev}
-              className="hidden md:flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
+              className="hidden md:flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-zinc-200 items-center justify-center hover:bg-zinc-50 active:scale-95 transition-all shrink-0"
               aria-label="Previous testimonial"
             >
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
 
             {/* Testimonials container */}
-            <div className="flex-1 w-full overflow-hidden py-4">
+            <div 
+              className="flex-1 w-[calc(100%+3rem)] -mx-6 px-6 md:w-full md:mx-0 md:px-0 overflow-x-auto md:overflow-hidden py-4 no-scrollbar snap-x snap-mandatory md:snap-none"
+            >
               <div 
-                className="flex transition-transform duration-500 ease-in-out gap-6 md:gap-8"
-                style={{
-                  transform: isDesktop
-                    ? `translateX(calc(-${activeTestimonial} * (50% + 16px)))`
-                    : `translateX(calc(-${activeTestimonial} * (100% + 24px)))`
-                }}
+                className="flex md:transition-transform md:duration-500 md:ease-in-out gap-6 md:gap-8"
+                style={isDesktop ? {
+                  transform: `translateX(calc(-${activeTestimonial} * (50% + 16px)))`
+                } : {}}
               >
                 {testimonials.map((t, idx) => (
                   <div
                     key={idx}
-                    className="bg-white/90 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] shadow-lg shadow-black/5 shrink-0 w-full md:w-[calc(50%-16px)]"
+                    className="p-6 md:p-8 rounded-2xl text-left flex flex-col justify-between min-h-[220px] shadow-md shrink-0 w-full md:w-[calc(50%-16px)] snap-start scroll-ml-6 md:scroll-ml-0 md:snap-none"
+                    style={{ backgroundColor: '#265B69' }}
                   >
-                    <p className="text-zinc-700 text-base italic leading-relaxed mb-6 flex-grow font-normal">
+                    <p className="text-teal-50 text-base italic leading-relaxed mb-6 flex-grow font-normal">
                       &ldquo;{t.quote}&rdquo;
                     </p>
-                    <div className="flex items-center gap-4 border-t border-zinc-200/60 pt-4 shrink-0">
-                      <div className="w-10 h-10 rounded-full bg-[#285B69] text-white font-bold flex items-center justify-center shadow-inner">
+                    <div className="flex items-center gap-4 border-t border-white/20 pt-4 shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-[#0B4027] text-white font-bold flex items-center justify-center shadow-inner">
                         {t.initials}
                       </div>
                       <div>
-                        <h4 className="font-bold text-zinc-900">{t.name}</h4>
-                        <span className="text-xs text-zinc-500">{t.role}</span>
+                        <h4 className="font-bold text-white">{t.name}</h4>
+                        <span className="text-xs text-teal-100">{t.role}</span>
                       </div>
                     </div>
                   </div>
@@ -524,29 +542,16 @@ export default function FnbPage() {
             {/* Right Nav Button */}
             <button
               onClick={handleNext}
-              className="hidden md:flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 items-center justify-center hover:bg-white/10 active:scale-95 transition-all shrink-0"
+              className="hidden md:flex w-10 h-10 md:w-12 md:h-12 rounded-full border border-zinc-200 items-center justify-center hover:bg-zinc-50 active:scale-95 transition-all shrink-0"
               aria-label="Next testimonial"
             >
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
               </svg>
             </button>
 
           </div>
 
-          {/* Dots Indicators */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.slice(0, isDesktop ? testimonials.length - 1 : testimonials.length).map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActiveTestimonial(idx)}
-                className={`w-3.5 h-1.5 rounded-full transition-all duration-200 ${
-                  activeTestimonial === idx ? "bg-teal-400 w-6" : "bg-teal-800 hover:bg-teal-700"
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
 
         </div>
       </section>
@@ -561,7 +566,7 @@ export default function FnbPage() {
                 {/* Image */}
                 <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="/fnb_discussion.png"
+                    src="/fnb_sec2.png"
                     alt="Food technologists discussing project"
                     fill
                     className="object-cover"
@@ -571,10 +576,10 @@ export default function FnbPage() {
 
                 {/* Text & List */}
                 <div className="order-2 lg:order-2">
-                  <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-6">
+                  <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-6 text-center md:text-left">
                     Popular Food, Beverage &amp; Nutrition Projects
                   </h2>
-                  <p className="text-[#18181B] text-[20px] leading-[28px] font-normal mb-8">
+                  <p className="text-[#18181B] text-[20px] leading-[28px] font-normal mb-8 text-center md:text-left">
                     Our experts support a wide range of food innovation, nutrition and product development initiatives.
                   </p>
 
@@ -664,7 +669,7 @@ export default function FnbPage() {
       <section id="contact" className="py-[15px] px-[15px] bg-[#fcfafa]">
         <div className="w-full bg-gradient-to-br from-[#285B69] to-[#0b4027] text-white rounded-3xl p-10 md:p-16 text-center shadow-2xl relative overflow-hidden">
           
-          <h2 className="text-4xl md:text-[72px] font-bold leading-[1.05] tracking-[-1.8px] max-w-4xl mx-auto mb-6">
+          <h2 className="text-4xl md:text-[72px] font-bold leading-[1.05] tracking-[-1.8px] max-w-6xl mx-auto mb-6">
             Need Support with a Food, Beverage or Nutrition Project?
           </h2>
           <p className="text-teal-50 text-base md:text-lg mb-10 leading-relaxed">
@@ -690,56 +695,60 @@ export default function FnbPage() {
       </section>
 
       {/* 10. Footer matching homepage style */}
-      <footer className="bg-zinc-50 py-20 md:py-24 px-6 border-t border-zinc-100">
+      <footer className="bg-zinc-50 py-16 md:py-24 border-t border-zinc-100">
         <div className="w-full px-8 md:px-12">
           
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 pb-12 border-b border-zinc-200">
+          <div className="flex flex-col md:grid md:grid-cols-12 gap-y-8 md:gap-16 pb-8 md:pb-12 border-b border-zinc-200">
             
             {/* Column 1: Logo */}
-            <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="md:col-span-4 flex flex-col items-start text-left">
               <div className="mb-4">
                 <Image
                   src="/Kolabtree_logo.svg"
                   alt="Kolabtree Logo"
                   width={159}
                   height={36}
-                  className="h-9 w-auto"
+                  className="h-7 md:h-9 w-auto"
                 />
               </div>
-              <p className="text-zinc-600 text-sm leading-relaxed max-w-xs font-normal">
+              <p className="hidden md:block text-zinc-600 text-sm leading-relaxed max-w-xs">
                 The global freelance marketplace connecting companies with specialized scientists and academic experts.
               </p>
             </div>
 
-            {/* Column 2: Address */}
-            <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
-              <h4 className="text-sm font-bold text-[#285B69] uppercase tracking-wider mb-4">Address</h4>
-              <div className="text-zinc-600 text-sm space-y-2 font-normal">
-                <p>123 Market Street</p>
-                <p>San Francisco, CA 94103</p>
-                <p>United States</p>
+            {/* Mobile Flex / Desktop Grid wrapper for Address & Navigation */}
+            <div className="flex justify-between w-full md:col-span-8 md:grid md:grid-cols-2 md:gap-16">
+              
+              {/* Column 2: Address */}
+              <div className="flex flex-col items-start text-left">
+                <h4 className="text-[10px] md:text-sm font-bold text-[#285B69] uppercase tracking-wider mb-3 md:mb-4">Address</h4>
+                <div className="text-zinc-600 text-[10px] md:text-sm space-y-1.5 md:space-y-2">
+                  <p>123 Market Street</p>
+                  <p>San Francisco, CA 94103</p>
+                  <p>United States</p>
+                </div>
               </div>
-            </div>
 
-            {/* Column 3: Navigation */}
-            <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
-              <h4 className="text-sm font-bold text-[#285B69] uppercase tracking-wider mb-4">Navigation</h4>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-zinc-600 text-sm font-medium">
-                <a href="#" className="hover:text-[#285B69] transition-colors">Website</a>
-                <a href="#" className="hover:text-[#285B69] transition-colors">Cosmetic Formulation</a>
-                <a href="#" className="hover:text-[#285B69] transition-colors">Academic Research</a>
-                <a href="#" className="hover:text-[#285B69] transition-colors">Food &amp; Beverage</a>
-                <a href="#" className="hover:text-[#285B69] transition-colors">Medical Research</a>
+              {/* Column 3: Navigation */}
+              <div className="flex flex-col items-start text-left">
+                <h4 className="text-[10px] md:text-sm font-bold text-[#285B69] uppercase tracking-wider mb-3 md:mb-4">Navigation</h4>
+                <div className="flex flex-col md:grid md:grid-cols-2 gap-y-1.5 md:gap-x-8 md:gap-y-3 text-zinc-600 text-[10px] md:text-sm font-medium">
+                  <a href="#" className="hover:text-[#285B69] transition-colors">Website</a>
+                  <a href="#" className="hover:text-[#285B69] transition-colors">Cosmetic Formulation</a>
+                  <a href="#" className="hover:text-[#285B69] transition-colors">Academic Research</a>
+                  <a href="#" className="hover:text-[#285B69] transition-colors">Food &amp; Beverage</a>
+                  <a href="#" className="hover:text-[#285B69] transition-colors">Medical Research</a>
+                </div>
               </div>
-            </div>
 
+            </div>
           </div>
 
           {/* Bottom Social & Copyright */}
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="pt-6 flex flex-row items-center justify-between gap-4 w-full">
             
             {/* Social icons */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {[
                 { name: "Instagram", path: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" },
                 { name: "Twitter", path: "M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" },
@@ -749,10 +758,10 @@ export default function FnbPage() {
                 <a
                   key={idx}
                   href="#"
-                  className="w-8 h-8 rounded-full border border-zinc-300 flex items-center justify-center text-zinc-500 hover:text-[#285B69] hover:border-[#285B69] transition-all duration-200"
+                  className="w-4 h-4 md:w-8 md:h-8 md:rounded-full md:border md:border-zinc-300 flex items-center justify-center text-zinc-500 hover:text-[#285B69] hover:border-[#285B69] transition-all duration-200"
                   aria-label={`Visit our ${social.name}`}
                 >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" viewBox="0 0 24 24">
                     <path d={social.path} />
                   </svg>
                 </a>
@@ -760,7 +769,7 @@ export default function FnbPage() {
             </div>
 
             {/* Copyright */}
-            <span className="text-zinc-500 text-xs font-medium tracking-wide">
+            <span className="text-zinc-500 text-[9px] md:text-xs font-medium tracking-wide">
               &copy; 2026 Kolabtree. All rights reserved.
             </span>
 
