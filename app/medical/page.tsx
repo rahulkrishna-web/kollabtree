@@ -204,7 +204,7 @@ export default function MedicalPage() {
             {/* Right Image */}
             <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/medical_hero.png"
+                src="/medical_lead.png"
                 alt="Medical professionals reviewing a tablet"
                 fill
                 priority
@@ -554,7 +554,7 @@ export default function MedicalPage() {
                 {/* Image (Mobile: Top, Desktop: Left) */}
                 <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="/medical_collaboration.png"
+                    src="/medical_sec2.png"
                     alt="Researchers in a state of the art laboratory looking at clinical trial data"
                     fill
                     className="object-cover"
@@ -721,11 +721,11 @@ export default function MedicalPage() {
               <div className="flex flex-col items-start text-left">
                 <h4 className="text-[10px] md:text-sm font-bold text-brand-primary uppercase tracking-wider mb-3 md:mb-4">Navigation</h4>
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-y-1.5 md:gap-x-8 md:gap-y-3 text-zinc-600 text-[10px] md:text-sm font-medium">
-                  <a href="#" className="hover:text-brand-primary transition-colors">Website</a>
-                  <a href="#" className="hover:text-brand-primary transition-colors">Cosmetic Formulation</a>
-                  <a href="#" className="hover:text-brand-primary transition-colors">Academic Research</a>
-                  <a href="#" className="hover:text-brand-primary transition-colors">Food &amp; Beverage</a>
-                  <a href="#" className="hover:text-brand-primary transition-colors">Medical Research</a>
+                  <a href="https://www.kolabtree.com/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary transition-colors">Website</a>
+                  <a href="/" className="hover:text-brand-primary transition-colors">Cosmetic Formulation</a>
+                  <a href="/academic" className="hover:text-brand-primary transition-colors">Academic Research</a>
+                  <a href="/fnb" className="hover:text-brand-primary transition-colors">Food &amp; Beverage</a>
+                  <a href="/medical" className="hover:text-brand-primary transition-colors">Medical Research</a>
                 </div>
               </div>
 

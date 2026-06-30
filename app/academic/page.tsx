@@ -728,11 +728,11 @@ export default function AcademicPage() {
               <div className="flex flex-col items-start text-left">
                 <h4 className="text-[10px] md:text-sm font-bold text-[#285B69] uppercase tracking-wider mb-3 md:mb-4">Navigation</h4>
                 <div className="flex flex-col md:grid md:grid-cols-2 gap-y-1.5 md:gap-x-8 md:gap-y-3 text-zinc-600 text-[10px] md:text-sm font-medium">
-                  <a href="#" className="hover:text-[#285B69] transition-colors">Website</a>
-                  <a href="#" className="hover:text-[#285B69] transition-colors">Cosmetic Formulation</a>
-                  <a href="#" className="hover:text-[#285B69] transition-colors">Academic Research</a>
-                  <a href="#" className="hover:text-[#285B69] transition-colors">Food &amp; Beverage</a>
-                  <a href="#" className="hover:text-[#285B69] transition-colors">Medical Research</a>
+                  <a href="https://www.kolabtree.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#285B69] transition-colors">Website</a>
+                  <a href="/" className="hover:text-[#285B69] transition-colors">Cosmetic Formulation</a>
+                  <a href="/academic" className="hover:text-[#285B69] transition-colors">Academic Research</a>
+                  <a href="/fnb" className="hover:text-[#285B69] transition-colors">Food &amp; Beverage</a>
+                  <a href="/medical" className="hover:text-[#285B69] transition-colors">Medical Research</a>
                 </div>
               </div>
 
