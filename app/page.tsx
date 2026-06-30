@@ -396,25 +396,30 @@ export default function Home() {
 
       {/* 5. Work with Experienced Cosmetic Industry Experts Section */}
       <section className="px-[15px] py-[15px]">
-        <div className="rounded-3xl text-white relative overflow-hidden py-16 md:py-24 px-6" style={{ background: 'linear-gradient(87.76deg, #265B69 1.88%, #0B4027 187.11%)' }}>
-        {/* Background visual detail */}
-        <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-white/5 -skew-x-12 pointer-events-none" />
-        
-        <div className="w-[90%] md:w-[90%] mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
-            {/* Left side info */}
-            <div className="lg:col-span-4 lg:sticky lg:top-32 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-                Work with Experienced Cosmetic Industry Experts
-              </h2>
-              <p className="text-teal-50/80 text-sm md:text-base leading-relaxed max-w-md">
-                Kolabtree provides access to specialists across cosmetic science, formulation development and regulatory affairs.
-              </p>
-            </div>
+        <div 
+          className="rounded-3xl text-white relative overflow-hidden py-16 md:py-24 px-8 md:px-12"
+          style={{ background: 'linear-gradient(87.76deg, #265B69 1.88%, #0B4027 187.11%)' }}
+        >
+          {/* Background visual detail */}
+          <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-white/5 -skew-x-12 pointer-events-none" />
+          
+          <div className="w-full relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              
+              {/* Left Column */}
+              <div className="lg:col-span-5 flex flex-col justify-center text-left">
+                <div className="lg:mx-auto">
+                  <h2 className="text-[32px] md:text-[42px] font-medium tracking-[-1.5px] mb-6 leading-[1.2] max-w-[320px]">
+                    Work with Experienced Cosmetic Industry Experts
+                  </h2>
+                  <p className="text-teal-50 text-base md:text-lg leading-relaxed max-w-[340px]">
+                    Kolabtree provides access to specialists across cosmetic science, formulation development and regulatory affairs.
+                  </p>
+                </div>
+              </div>
 
-            {/* Right side expert cards: scrollable on mobile, grid on desktop */}
-            <div className="lg:col-span-8 w-full">
+              {/* Right side expert cards: scrollable on mobile, grid on desktop */}
+              <div className="lg:col-span-7 w-full">
               
               {/* Mobile Carousel / Desktop Grid */}
               <div className="overflow-x-auto no-scrollbar flex flex-nowrap pb-6 lg:pb-0 lg:overflow-visible lg:flex-none lg:grid lg:grid-cols-2 gap-5 px-1 lg:px-0 scroll-smooth snap-x">
