@@ -280,17 +280,6 @@ export default function FnbPage() {
             {/* Card 2 */}
             <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
               <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
-                <Image src="/fnb_icons/product_reformulation.png" alt="Product Reformulation" width={48} height={48} className="w-full h-full object-contain" />
-              </div>
-              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Product Reformulation</h3>
-              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
-                Improve taste, texture, nutritional value, shelf life or manufacturing efficiency for existing products.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
-              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
                 <Image src="/fnb_icons/beverage_formulation.png" alt="Beverage Formulation" width={48} height={48} className="w-full h-full object-contain" />
               </div>
               <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Beverage Formulation</h3>
@@ -299,18 +288,7 @@ export default function FnbPage() {
               </p>
             </div>
 
-            {/* Card 4 */}
-            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
-              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
-                <Image src="/fnb_icons/shelf_life.png" alt="Shelf-Life & Stability Studies" width={48} height={48} className="w-full h-full object-contain" />
-              </div>
-              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Shelf-Life &amp; Stability Studies</h3>
-              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
-                Assess product stability, quality and shelf life under different storage and environmental conditions.
-              </p>
-            </div>
-
-            {/* Card 5 */}
+            {/* Card 3 */}
             <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
               <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
                 <Image src="/fnb_icons/nutrition_consulting.png" alt="Nutrition Consulting" width={48} height={48} className="w-full h-full object-contain" />
@@ -318,6 +296,28 @@ export default function FnbPage() {
               <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Nutrition Consulting</h3>
               <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
                 Work with qualified nutrition experts to evaluate ingredients, nutritional profiles and health claims.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
+                <Image src="/fnb_icons/product_reformulation.png" alt="Product Reformulation" width={48} height={48} className="w-full h-full object-contain" />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Product Reformulation</h3>
+              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
+                Improve taste, texture, nutritional value, shelf life or manufacturing efficiency for existing products.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full text-left">
+              <div className="w-8 h-8 md:w-12 md:h-12 mb-4 md:mb-6">
+                <Image src="/fnb_icons/shelf_life.png" alt="Shelf-Life & Stability Studies" width={48} height={48} className="w-full h-full object-contain" />
+              </div>
+              <h3 className="text-sm md:text-lg font-bold text-[#18181B] mb-2">Shelf-Life &amp; Stability Studies</h3>
+              <p className="text-zinc-600 text-xs md:text-base leading-[1.4] md:leading-relaxed">
+                Assess product stability, quality and shelf life under different storage and environmental conditions.
               </p>
             </div>
 
