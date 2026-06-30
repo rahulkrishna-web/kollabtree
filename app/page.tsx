@@ -491,71 +491,70 @@ export default function Home() {
       {/* 6. How Kolabtree Works Section */}
       <section className="py-[15px] px-[15px]">
         <div>
-          <div className="bg-white rounded-3xl border border-zinc-100 p-8 md:p-16 shadow-sm">
-            
-            <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-primary tracking-tight mb-4">
-                How Kolabtree Works
-              </h2>
-              <p className="text-zinc-600 text-sm md:text-base">
-                Hiring top-tier scientific talent is fast, simple, and completely secure.
-              </p>
-            </div>
-
-            {/* Desktop/Mobile timeline */}
-            <div className="relative">
+          <div className="bg-white rounded-3xl border border-zinc-100 p-8 md:p-16 shadow-sm relative overflow-hidden">
+            <div className="w-full relative z-10">
               
-              {/* Horizontal connection line (desktop only) */}
-              <div className="hidden md:block absolute top-7 left-[15%] right-[15%] h-0.5 bg-zinc-200 z-0" />
-              
-              {/* Vertical connection line (mobile only) */}
-              <div className="md:hidden absolute top-7 bottom-7 left-[28px] w-0.5 bg-zinc-200 z-0" />
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-4">
+                  How Kolabtree Works
+                </h2>
+                <p className="text-[#18181B] text-base md:text-lg leading-relaxed">
+                  Hiring top-tier scientific talent is fast, simple, and completely secure.
+                </p>
+              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 z-10 relative">
+              <div className="relative w-full md:w-[85%] lg:w-[80%] mx-auto">
+                {/* Horizontal Line for Desktop */}
+                <div className="hidden md:block absolute top-[73px] left-[16.6%] right-[16.6%] h-[2px] bg-[#D4DEE1] -z-10" />
                 
-                {/* Step 1 */}
-                <div className="flex md:flex-col gap-6 md:gap-0 items-start md:items-center text-left md:text-center relative">
-                  <div className="w-14 h-14 rounded-full bg-zinc-100 md:bg-white text-zinc-800 border-2 border-zinc-200 flex items-center justify-center text-xl font-bold md:mb-6 shrink-0 shadow-sm relative after:absolute after:inset-1 after:rounded-full after:border after:border-dashed after:border-zinc-300">
-                    1
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-brand-primary mb-2">Tell Us About Your Project</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed max-w-xs md:mx-auto">
-                      Share your formulation requirements, objectives and timeline.
-                    </p>
-                  </div>
-                </div>
+                {/* Vertical Line for Mobile */}
+                <div className="md:hidden absolute top-[73px] bottom-[73px] left-1/2 -translate-x-1/2 w-[2px] bg-[#D4DEE1] -z-10" />
 
-                {/* Step 2 */}
-                <div className="flex md:flex-col gap-6 md:gap-0 items-start md:items-center text-left md:text-center relative">
-                  <div className="w-14 h-14 rounded-full bg-zinc-100 md:bg-white text-zinc-800 border-2 border-zinc-200 flex items-center justify-center text-xl font-bold md:mb-6 shrink-0 shadow-sm relative after:absolute after:inset-1 after:rounded-full after:border after:border-dashed after:border-zinc-300">
-                    2
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                  
+                  {/* Step 1 */}
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-[147px] h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-4xl font-bold text-[#265B69] mb-6 z-10 shadow-sm">
+                      1
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-brand-primary mb-2">Tell Us About Your Project</h3>
+                      <p className="text-[#18181B] text-base leading-relaxed">
+                        Share your formulation requirements, objectives and timeline.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-brand-primary mb-2">Receive Expert Responses</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed max-w-xs md:mx-auto">
-                      Review proposals from qualified cosmetic formulation professionals.
-                    </p>
-                  </div>
-                </div>
 
-                {/* Step 3 */}
-                <div className="flex md:flex-col gap-6 md:gap-0 items-start md:items-center text-left md:text-center relative">
-                  <div className="w-14 h-14 rounded-full bg-zinc-100 md:bg-white text-zinc-800 border-2 border-zinc-200 flex items-center justify-center text-xl font-bold md:mb-6 shrink-0 shadow-sm relative after:absolute after:inset-1 after:rounded-full after:border after:border-dashed after:border-zinc-300">
-                    3
+                  {/* Step 2 */}
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-[147px] h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-4xl font-bold text-[#265B69] mb-6 z-10 shadow-sm">
+                      2
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-brand-primary mb-2">Receive Expert Responses</h3>
+                      <p className="text-[#18181B] text-base leading-relaxed">
+                        Review proposals from qualified cosmetic formulation professionals.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-brand-primary mb-2">Start Collaborating</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed max-w-xs md:mx-auto">
-                      Choose the expert that best fits your project and begin working together.
-                    </p>
-                  </div>
-                </div>
 
+                  {/* Step 3 */}
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-[147px] h-[147px] shrink-0 rounded-full bg-[#D4DEE1] flex items-center justify-center text-4xl font-bold text-[#265B69] mb-6 z-10 shadow-sm">
+                      3
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-brand-primary mb-2">Start Collaborating</h3>
+                      <p className="text-[#18181B] text-base leading-relaxed">
+                        Choose the expert that best fits your project and begin working together.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
             </div>
-
           </div>
         </div>
       </section>
@@ -653,19 +652,19 @@ export default function Home() {
       <section className="py-[15px] px-[15px]">
         <div>
           <div className="bg-white rounded-3xl border border-zinc-100 p-8 md:p-16 shadow-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               
               {/* Left: bullet lists */}
-              <div className="lg:col-span-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-brand-primary tracking-tight mb-4">
+              <div>
+                <h2 className="text-[32px] md:text-[42px] font-medium text-[#18181B] leading-[1.2] tracking-[-1.5px] mb-4">
                   Popular Cosmetic Formulation Projects
                 </h2>
-                <p className="text-zinc-600 text-sm md:text-base leading-relaxed mb-8">
+                <p className="text-zinc-600 text-base md:text-lg leading-relaxed mb-8">
                   Our experts support projects across skincare, haircare, cosmetics and personal care categories.
                 </p>
 
-                {/* Bullets layout - 2 columns */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
+                {/* Bullets layout - 1 column */}
+                <div className="flex flex-col space-y-3">
                   {[
                     "Moisturiser Formulation",
                     "Anti-Ageing Skincare Development",
@@ -681,25 +680,23 @@ export default function Home() {
                     "Manufacturing Scale-Up Support"
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                      <span className="text-zinc-700 text-sm font-medium">{item}</span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-primary shrink-0" />
+                      <span className="text-zinc-800 text-base font-normal leading-relaxed">{item}</span>
                     </div>
                   ))}
                 </div>
-
               </div>
 
               {/* Right: scientists discussion photo */}
-              <div className="lg:col-span-6 w-full flex justify-center lg:justify-end">
-                <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-xl border border-zinc-100 aspect-[1/1] relative group bg-zinc-100">
-                  <Image
-                    src="/scientists_discussion.png"
-                    alt="Scientists discussing formulas in a lab"
-                    fill
-                    className="object-cover group-hover:scale-101 transition-transform duration-700"
-                    sizes="(max-w-768px) 100vw, 450px"
-                  />
-                </div>
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-zinc-100">
+                <Image
+                  src="/scientists_discussion.png"
+                  alt="Scientists discussing formulas in a lab"
+                  fill
+                  className="object-cover"
+                  sizes="(max-w-1024px) 100vw, 600px"
+                  priority
+                />
               </div>
 
             </div>
