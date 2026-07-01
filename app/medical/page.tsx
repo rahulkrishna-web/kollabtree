@@ -779,8 +779,9 @@ export default function MedicalPage() {
           </div>
 
           {/* Copyright below line */}
-          <div className="pt-8 text-center text-zinc-500 text-sm font-medium">
-             © 2026 Kolabtree. All rights reserved.
+          <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-3 text-zinc-500 text-sm font-medium">
+            <img src="https://images.kolabtree.com/cactus-logo-white.svg" alt="Cactus Logo" className="h-6 w-auto" />
+            <span>© 2026 Cactus Communications Limited, UK. All Rights Reserved</span>
           </div>
 
         </div>
