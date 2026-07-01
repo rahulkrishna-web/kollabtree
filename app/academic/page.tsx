@@ -48,40 +48,28 @@ export default function AcademicPage() {
 
   const testimonials = [
     {
-      name: "Valli Maya",
-      role: "Associate Professor, Scientific Methodologies",
-      quote: "I find Kolabtree to be a great platform for academic freelancers. Kolabtree provides a unique opportunity for freelancers, specifically those in the academic field, to connect with clients who require their expertise and services.",
-      initials: "VM"
-    },
-    {
       name: "Fasil Merawi",
-      role: "Department Chair, Addis Ababa University",
-      quote: "Kolabtree is an excellent platform to interact with field-specific experts. For every need in research, education and academic functions, there are experts here to help. Moreover, Kolabtree personnel are also very active in fulfilling our needs.",
+      role: "Client",
+      quote: "I find Kolabtree to be a great platform for academic freelancers. Kolabtree provides a unique opportunity for freelancers, specifically those in the academic field, to connect with clients who require their expertise and services.",
       initials: "FM"
     },
     {
-      name: "Dr. Elena Rostova",
-      role: "Senior Researcher, Molecular Biology",
-      quote: "I needed a specialized biostatistician to review our clinical study dataset before submitting to Nature. The statistician we hired via Kolabtree was brilliant, fast, and helped refine our methodology sections perfectly.",
-      initials: "ER"
+      name: "Valli Maya",
+      role: "Client",
+      quote: "Kolabtree is an excellent platform to interact with field-specific experts. For every need in research, education and academic functions, there are experts here to help. Moreover, Kolabtree personnel are also very active in fulfilling our needs.",
+      initials: "VM"
     },
     {
-      name: "Prof. Arthur Pendelton",
-      role: "Director of Research, Environmental Sciences",
-      quote: "Our grant proposal draft was good, but the scientific editing and formatting provided by the Kolabtree expert elevated it to a winning submission. Truly a seamless, secure, and professional collaboration.",
-      initials: "AP"
+      name: "Dmytro Slinko",
+      role: "Client",
+      quote: "Kolabtree excels at connecting clients with top freelance PhDs for niche scientific projects. The platform's strength lies in its vetted talent pool, delivering high-quality work quickly. Overall, it's a cost-effective solution for startups or researchers needing specialized expertise fast.",
+      initials: "DS"
     },
     {
-      name: "Dr. Hiroshi Tanaka",
-      role: "Professor of Chemistry, Kyoto Institute",
-      quote: "Kolabtree allowed us to hire an expert in quantum chemistry simulation on demand. The results were highly accurate and critical for our subsequent journal publication.",
-      initials: "HT"
-    },
-    {
-      name: "Dr. Beatrice Vance",
-      role: "Associate Dean, Social Sciences",
-      quote: "We needed qualitative data analysis for a multi-country survey. The sociologist we found on Kolabtree delivered top-tier thematic coding that exceeded our expectations.",
-      initials: "BV"
+      name: "Suresh Kalkunte",
+      role: "Client",
+      quote: "The subject matter expert I found far exceeded my expectations. Thanks for creating a virtuous platform for collaboration.",
+      initials: "SK"
     }
   ];
 

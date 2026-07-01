@@ -110,27 +110,21 @@ export default function Home() {
   const testimonials = [
     {
       name: "Arthur Jackson",
-      role: "Founder, Bloom Skincare",
+      role: "Client",
       quote: "I found a knowledgeable, competent chemist that I would not have found otherwise. The relationship management via Kolabtree worked great and provides a good record of the work.",
       initials: "AJ"
     },
     {
       name: "Jade Amaka",
-      role: "R&D Director, Organics Lab",
+      role: "Client",
       quote: "Great pricing, good quality chemist, has everything you may need. Turnaround super quick with milestones. Everything is in your control. I found the site is very safe and simple.",
       initials: "JA"
     },
     {
-      name: "Dr. Sarah Jenkins",
-      role: "Lead Formulator, Glow Botanicals",
-      quote: "Kolabtree connected us with an exceptional toxicologist who cleared our EU regulatory hurdle in days. The milestone system kept the project on track and within budget.",
-      initials: "SJ"
-    },
-    {
-      name: "Marcus Vance",
-      role: "VP of Product, Apex Haircare",
-      quote: "We needed to reformulate our entire conditioning line to meet clean beauty standards. The expert we hired was professional, responsive, and delivered stable, high-performing formulas.",
-      initials: "MV"
+      name: "Philip D Bush",
+      role: "Client",
+      quote: "This website connected me with a freelancer who allowed my dreams of creating the perfect product to become possible!",
+      initials: "PB"
     }
   ];
 

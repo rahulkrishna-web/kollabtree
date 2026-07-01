@@ -49,27 +49,27 @@ export default function FnbPage() {
   const testimonials = [
     {
       name: "Oliur Rahman",
-      role: "Food Scientist & Consultant",
+      role: "Client",
       quote: "As a food science researcher providing specialized help with a tea product formulation project, I found Kolabtree to be an exceptional platform. The site's focus on scientific freelancers made it easy to connect with experts who had verified credentials and niche experience.",
       initials: "OR"
     },
     {
       name: "Arthur Jackson",
-      role: "Product Development Director",
+      role: "Client",
       quote: "I found a knowledgeable, competent chemist that I would not have found otherwise. The relationship management via Kolabtree worked great and provides a good record of the work.",
       initials: "AJ"
     },
     {
-      name: "Elena Rostova",
-      role: "Product Developer, PureBites",
-      quote: "The regulatory support on our plant-based snack line was stellar. The expert we hired through Kolabtree navigated FDA guidelines flawlessly, saving us months of back-and-forth.",
-      initials: "ER"
+      name: "Philip D Bush",
+      role: "Client",
+      quote: "This website connected me with a freelancer who allowed my dreams of creating the perfect product to become possible!",
+      initials: "PB"
     },
     {
-      name: "Marcus Thorne",
-      role: "Founder, BrewTech Labs",
-      quote: "We needed to solve a complex carbonation stability issue for our new prebiotic soda. The beverage chemist we found here resolved it within two weeks. Exceptional talent.",
-      initials: "MT"
+      name: "James K.",
+      role: "Client",
+      quote: "What an amazing platform! Kolabtree enables the collaboration between invention and expertise in a professional way like no other platforms.",
+      initials: "JK"
     }
   ];
 

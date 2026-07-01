@@ -49,33 +49,27 @@ export default function MedicalPage() {
   const testimonials = [
     {
       name: "Carlos Del Rio",
-      role: "Freelance Medical & Scientific Writer",
+      role: "Client",
       quote: "I have been working as a freelance Medical/Scientific Writer with Kolabtree for almost two years. My experience with the platform has been excellent so far. I have been able to work on a variety of interesting projects with clients all over the world.",
       initials: "CD"
     },
     {
       name: "Daniel Barolet",
-      role: "Client & Research Director",
+      role: "Client",
       quote: "I want to thank you for a very positive experience with the writer and the Kolabtree team. The entire process was smooth and trouble-free. I have nothing but positive comments about the scientist freelancer who provided the manuscript.",
       initials: "DB"
     },
     {
-      name: "Dr. Sarah Jenkins",
-      role: "Principal Investigator",
-      quote: "We needed a high-quality clinical trial protocol written in a tight deadline. The medical writer we found via Kolabtree was outstanding, extremely professional, and understood the therapeutic area perfectly.",
-      initials: "SJ"
+      name: "M A B",
+      role: "Client",
+      quote: "It was an excellent experience, having freelancers in research who can do analysis and help in writing the research. For sure I will take their support next time if I need it and I will advise my colleagues as well.",
+      initials: "MB"
     },
     {
-      name: "Dr. Marcus Vance",
-      role: "Biotech Founder",
-      quote: "The regulatory documentation support we received was stellar. The consultant helped us prepare our FDA submission documentation, ensuring all compliance and technical standards were fully met.",
-      initials: "MV"
-    },
-    {
-      name: "Prof. Emily Zhang",
-      role: "Academic Physician",
-      quote: "Collaborating with a Kolabtree editor to polish our manuscript draft made all the difference. The language refinement was top-tier, and our paper was accepted into a Q1 medical journal.",
-      initials: "EZ"
+      name: "Abrar Hasan",
+      role: "Client",
+      quote: "I received an abstract without any hassle. Good pool of experienced personnel.",
+      initials: "AH"
     }
   ];
 
