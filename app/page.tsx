@@ -280,7 +280,7 @@ export default function Home() {
           {/* Hero Image */}
           <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden z-20">
             <Image
-              src="/KT_cosmetic_lead_img.png"
+              src="/cosmetic_hero.png"
               alt="Cosmetic formulation chemists in lab"
               width={956}
               height={576}
@@ -711,9 +711,9 @@ export default function Home() {
               </div>
 
               {/* Right: scientists discussion photo */}
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-zinc-100">
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
-                  src="/popular_cosmetic_cropped.png"
+                  src="/cosmetic_projects.png"
                   alt="Scientists discussing formulas in a lab"
                   fill
                   className="object-cover"

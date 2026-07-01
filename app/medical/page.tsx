@@ -214,9 +214,9 @@ export default function MedicalPage() {
             </div>
 
             {/* Right Image */}
-            <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
-                src="/medical_lead.png"
+                src="/medical_hero.png"
                 alt="Medical professionals reviewing a tablet"
                 fill
                 priority
@@ -582,7 +582,7 @@ export default function MedicalPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 
                 {/* Image (Mobile: Top, Desktop: Left) */}
-                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
                     src="/medical_sec2.png"
                     alt="Researchers in a state of the art laboratory looking at clinical trial data"

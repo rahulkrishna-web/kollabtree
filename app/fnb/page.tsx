@@ -212,9 +212,9 @@ export default function FnbPage() {
             </div>
 
             {/* Hero Image */}
-            <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-zinc-200/50 relative group bg-zinc-100 aspect-[16/11] z-20">
+            <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden relative group aspect-[16/11] z-20">
               <Image
-                src="/fnb_lead.png"
+                src="/fnb_hero.png"
                 alt="Food scientist and nutritionist writing on clipboard"
                 fill
                 priority
@@ -582,9 +582,9 @@ export default function FnbPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 
                 {/* Image */}
-                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
-                    src="/fnb_sec2.png"
+                    src="/fnb_projects.png"
                     alt="Food technologists discussing project"
                     fill
                     className="object-cover"

@@ -215,9 +215,9 @@ export default function AcademicPage() {
             </div>
 
             {/* Right Image */}
-            <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
-                src="/academic_lead_img.png"
+                src="/academic_hero.png"
                 alt="Academic researchers collaborating"
                 fill
                 priority
@@ -583,9 +583,9 @@ export default function AcademicPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 
                 {/* Image (Mobile: Top, Desktop: Left) */}
-                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
-                    src="/popular_academic.png"
+                    src="/academic_projects.png"
                     alt="Researchers at a desk"
                     fill
                     className="object-cover"
