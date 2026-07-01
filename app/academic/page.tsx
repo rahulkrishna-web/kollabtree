@@ -44,6 +44,7 @@ export default function AcademicPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [showFloatingCta, setShowFloatingCta] = useState(false);
 
   const testimonials = [
     {
@@ -91,6 +92,27 @@ export default function AcademicPage() {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const ctas = document.querySelectorAll('[data-cta="true"]');
+    if (ctas.length === 0) return;
+
+    let visibleCount = 0;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          visibleCount++;
+        } else {
+          visibleCount = Math.max(0, visibleCount - 1);
+        }
+      });
+      setShowFloatingCta(visibleCount === 0);
+    }, { threshold: 0 });
+
+    ctas.forEach(cta => observer.observe(cta));
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -167,12 +189,7 @@ export default function AcademicPage() {
             />
           </div>
           
-          <a
-            href="#contact"
-            className="text-lg font-medium text-[#18181B] hover:text-brand-primary transition-colors"
-          >
-            Contact Sales
-          </a>
+
         </div>
       </header>
 
@@ -193,7 +210,8 @@ export default function AcademicPage() {
               </p>
               
               <a
-                href="#contact"
+                href="https://www.kolabtree.com/create-project"
+                data-cta="true"
                 className="group relative px-8 py-4 bg-white text-brand-primary rounded-full font-bold shadow-lg hover:bg-teal-50 hover:shadow-xl active:scale-98 transition-all inline-flex items-center gap-3"
               >
                 <span>Request a Service</span>
@@ -689,8 +707,9 @@ export default function AcademicPage() {
             Connect with experienced researchers, statisticians and subject matter experts for support across every stage of the research process.
           </p>
           
-          <button
-            onClick={() => alert("Modal interaction")}
+          <a
+            href="https://www.kolabtree.com/create-project"
+            data-cta="true"
             className="group px-8 py-4 bg-white text-brand-primary rounded-full font-bold shadow-lg hover:shadow-xl active:scale-98 transition-all inline-flex items-center gap-2"
           >
             Request a Service
@@ -702,94 +721,94 @@ export default function AcademicPage() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </button>
+          </a>
 
         </div>
       </section>
 
       {/* 10. Footer matching homepage style */}
-      <footer className="bg-zinc-50 py-16 md:py-24 border-t border-zinc-100">
+      <footer className="bg-black text-white pt-16 pb-8 border-t border-zinc-800 font-sans">
         <div className="w-full px-8 md:px-12">
           
-          <div className="flex flex-col md:grid md:grid-cols-12 gap-y-8 md:gap-16 pb-8 md:pb-12 border-b border-zinc-200">
+          <div className="flex flex-col lg:flex-row justify-between gap-y-12 lg:gap-8 pb-12 border-b border-zinc-800">
             
-            {/* Column 1: Logo */}
-            <div className="md:col-span-4 flex flex-col items-start text-left">
-              <div className="mb-4">
-                <Image
-                  src="/Kolabtree_logo.svg"
-                  alt="Kolabtree Logo"
-                  width={159}
-                  height={36}
-                  className="h-7 md:h-9 w-auto"
-                />
-              </div>
-              <p className="hidden md:block text-zinc-600 text-sm leading-relaxed max-w-xs font-normal">
-                The global freelance marketplace connecting companies with specialized scientists and academic experts.
+            {/* Column 1: Address */}
+            <div className="flex flex-col items-start text-left">
+              <h4 className="text-base font-bold text-white mb-6">Address</h4>
+              <p className="text-zinc-400 text-sm leading-relaxed max-w-sm">
+                Cactus Communications Limited, 15-19 Bloomsbury Way, Holborn, London WC1A 2TH, United Kingdom
               </p>
             </div>
 
-            {/* Mobile Flex / Desktop Grid wrapper for Address & Navigation */}
-            <div className="flex justify-between w-full md:col-span-8 md:grid md:grid-cols-2 md:gap-16">
-              
-              {/* Column 2: Address */}
-              <div className="flex flex-col items-start text-left">
-                <h4 className="text-[10px] md:text-sm font-bold text-[#285B69] uppercase tracking-wider mb-3 md:mb-4">Address</h4>
-                <div className="text-zinc-600 text-[10px] md:text-sm space-y-1.5 md:space-y-2 font-normal">
-                  <p>123 Market Street</p>
-                  <p>San Francisco, CA 94103</p>
-                  <p>United States</p>
-                </div>
+            {/* Column 2: Follow Us */}
+            <div className="flex flex-col items-start text-left">
+              <h4 className="text-base font-bold text-white mb-6">Follow Us</h4>
+              <div className="flex flex-wrap gap-4 lg:gap-6 items-center">
+                <a href="https://www.kolabtree.com/blog/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors text-sm font-medium">
+                  <img src="https://images.kolabtree.com/blog_icon_14_09_2021.svg" alt="Kolabtree Blog" className="w-6 h-6 object-contain shrink-0" />
+                  <span className="hidden sm:inline">Kolabtree Blog</span>
+                </a>
+                <a href="https://twitter.com/kolabtree" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors text-sm font-medium">
+                  <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                    </svg>
+                  </div>
+                  <span className="hidden sm:inline">Twitter</span>
+                </a>
+                <a href="https://www.facebook.com/kolabtree" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors text-sm font-medium">
+                  <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M14.885 24v-10.963h3.684l.551-4.278h-4.235v-2.731c0-1.238.344-2.08 2.119-2.08h2.261v-3.829c-.391-.052-1.733-.169-3.295-.169-3.262 0-5.495 1.99-5.495 5.648v3.161h-3.693v4.278h3.693v10.963h4.41z" />
+                    </svg>
+                  </div>
+                  <span className="hidden sm:inline">Facebook</span>
+                </a>
+                <a href="https://www.linkedin.com/company/kolabtree" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors text-sm font-medium">
+                  <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </div>
+                  <span className="hidden sm:inline">LinkedIn</span>
+                </a>
               </div>
-
-              {/* Column 3: Navigation */}
-              <div className="flex flex-col items-start text-left">
-                <h4 className="text-[10px] md:text-sm font-bold text-[#285B69] uppercase tracking-wider mb-3 md:mb-4">Navigation</h4>
-                <div className="flex flex-col md:grid md:grid-cols-2 gap-y-1.5 md:gap-x-8 md:gap-y-3 text-zinc-600 text-[10px] md:text-sm font-medium">
-                  <a href="https://www.kolabtree.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#285B69] transition-colors">Website</a>
-                  <a href="/" className="hover:text-[#285B69] transition-colors">Cosmetic Formulation</a>
-                  <a href="/academic" className="hover:text-[#285B69] transition-colors">Academic Research</a>
-                  <a href="/fnb" className="hover:text-[#285B69] transition-colors">Food &amp; Beverage</a>
-                  <a href="/medical" className="hover:text-[#285B69] transition-colors">Medical Research</a>
-                </div>
-              </div>
-
             </div>
+
+            {/* Column 3: Payment Partners */}
+            <div className="flex flex-col items-start text-left">
+              <h4 className="text-base font-bold text-white mb-6">Our Payment Partners</h4>
+              <div className="flex items-center gap-2 flex-wrap">
+                <img src="https://images.kolabtree.com/Payment_Partner_07_09_21.svg" alt="Payment Partners" className="h-8 w-auto bg-white rounded py-1 px-2 object-contain" />
+              </div>
+            </div>
+
           </div>
 
-          {/* Bottom Social & Copyright */}
-          <div className="pt-6 flex flex-row items-center justify-between gap-4 w-full">
-            
-            {/* Social icons */}
-            <div className="flex items-center gap-3">
-              {[
-                { name: "Instagram", path: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" },
-                { name: "Twitter", path: "M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" },
-                { name: "LinkedIn", path: "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" },
-                { name: "Facebook", path: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" }
-              ].map((social, idx) => (
-                <a
-                  key={idx}
-                  href="#"
-                  className="w-4 h-4 md:w-8 md:h-8 md:rounded-full md:border md:border-zinc-300 flex items-center justify-center text-zinc-500 hover:text-[#285B69] hover:border-[#285B69] transition-all duration-200"
-                  aria-label={`Visit our ${social.name}`}
-                >
-                  <svg className="w-3.5 h-3.5 md:w-4 md:h-4 fill-current" viewBox="0 0 24 24">
-                    <path d={social.path} />
-                  </svg>
-                </a>
-              ))}
-            </div>
-
-            {/* Copyright */}
-            <span className="text-zinc-500 text-[9px] md:text-xs font-medium tracking-wide">
-              &copy; 2026 Kolabtree. All rights reserved.
-            </span>
-
+          {/* Copyright below line */}
+          <div className="pt-8 text-center text-zinc-500 text-sm font-medium">
+             © 2026 Kolabtree. All rights reserved.
           </div>
 
         </div>
       </footer>
+
+      {/* Floating CTA */}
+      <div 
+        className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-in-out ${
+          showFloatingCta ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0 pointer-events-none'
+        }`}
+      >
+        <a
+          href="https://www.kolabtree.com/create-project"
+          className="group px-8 py-4 bg-brand-primary text-white rounded-full font-bold shadow-2xl hover:shadow-3xl hover:bg-teal-700 active:scale-98 transition-all inline-flex items-center gap-2"
+        >
+          Request a Service
+          <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
 
     </div>
   );
