@@ -190,7 +190,6 @@ export default function FnbPage() {
           <a
             href="https://www.kolabtree.com/create-project"
             data-cta="true"
-            data-cta="true"
             className="group relative px-8 py-4 bg-[#285B69] text-white rounded-full font-semibold shadow-lg shadow-teal-900/10 hover:shadow-xl hover:shadow-teal-900/20 active:scale-98 transition-all duration-200 overflow-hidden mb-16 inline-flex items-center gap-2"
           >
             <span className="relative z-10">Request a Service</span>
