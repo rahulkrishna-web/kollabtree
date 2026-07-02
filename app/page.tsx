@@ -278,7 +278,7 @@ export default function Home() {
           </div>
 
           {/* Hero Image */}
-          <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden z-20">
+          <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden z-20">
             <Image
               src="/cosmetic_hero.png"
               alt="Cosmetic formulation chemists in lab"
