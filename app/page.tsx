@@ -278,14 +278,14 @@ export default function Home() {
           </div>
 
           {/* Hero Image */}
-          <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden z-20">
+          <div className="relative w-full rounded-xl overflow-hidden z-20">
             <Image
               src="/cosmetic_hero.png"
               alt="Cosmetic formulation chemists in lab"
               width={956}
               height={576}
               priority
-              className="w-full h-auto block"
+              className="w-full h-auto block scale-105"
             />
           </div>
         </div>
@@ -711,12 +711,12 @@ export default function Home() {
               </div>
 
               {/* Right: scientists discussion photo */}
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
                 <Image
                   src="/cosmetic_projects.png"
                   alt="Scientists discussing formulas in a lab"
                   fill
-                  className="object-cover"
+                  className="object-cover scale-105"
                   sizes="(max-w-1024px) 100vw, 600px"
                   priority
                 />

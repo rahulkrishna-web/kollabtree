@@ -214,13 +214,13 @@ export default function MedicalPage() {
             </div>
 
             {/* Right Image */}
-            <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden">
+            <div className="w-full relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image
                 src="/medical_hero.png"
                 alt="Medical professionals reviewing a tablet"
                 fill
                 priority
-                className="object-cover"
+                className="object-cover scale-105"
                 sizes="(max-w-1024px) 100vw, 800px"
               />
             </div>
@@ -582,12 +582,12 @@ export default function MedicalPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 
                 {/* Image (Mobile: Top, Desktop: Left) */}
-                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-xl overflow-hidden">
                   <Image
                     src="/medical_sec2.png"
                     alt="Researchers in a state of the art laboratory looking at clinical trial data"
                     fill
-                    className="object-cover"
+                    className="object-cover scale-105"
                     sizes="(max-w-1024px) 100vw, 600px"
                   />
                 </div>

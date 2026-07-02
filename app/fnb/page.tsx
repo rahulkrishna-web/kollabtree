@@ -212,13 +212,13 @@ export default function FnbPage() {
             </div>
 
             {/* Hero Image */}
-            <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden relative group aspect-[16/11] z-20">
+            <div className="w-full rounded-xl overflow-hidden relative group aspect-[16/11] z-20">
               <Image
                 src="/fnb_hero.png"
                 alt="Food scientist and nutritionist writing on clipboard"
                 fill
                 priority
-                className="object-cover group-hover:scale-101 transition-transform duration-700"
+                className="object-cover scale-105 group-hover:scale-106 transition-transform duration-700"
                 sizes="(max-w-1024px) 100vw, 1000px"
               />
             </div>
@@ -582,12 +582,12 @@ export default function FnbPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 
                 {/* Image */}
-                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+                <div className="order-1 lg:order-1 relative w-full aspect-[4/3] rounded-xl overflow-hidden">
                   <Image
                     src="/fnb_projects.png"
                     alt="Food technologists discussing project"
                     fill
-                    className="object-cover"
+                    className="object-cover scale-105"
                     sizes="(max-w-1024px) 100vw, 600px"
                   />
                 </div>
